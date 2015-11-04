@@ -1,6 +1,6 @@
 package com.company.game;
 
-import com.company.game.AbstractObjects.Bullet;
+import com.company.game.concreteObjects.Bullet;
 import com.company.game.AbstractObjects.Enemy;
 import com.company.game.concreteObjects.Player;
 

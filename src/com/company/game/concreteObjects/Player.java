@@ -5,11 +5,8 @@ import com.company.game.AbstractObjects.GameObject;
 import com.company.gameObjectsInterfaces.Firable;
 import com.company.graphics.ImageAlbum;
 
-/**
- * Created by stil2_000 on 2.11.2015 ã..
- */
-public class Player extends GameObject implements Firable {
 
+public class Player extends GameObject implements Firable {
 
     private final int INITILAL_NUMBER_OF_LIVES = 3;
     private int numberOfLives;
@@ -37,10 +34,14 @@ public class Player extends GameObject implements Firable {
         return this.numberOfLives;
     }
 
+    public void addToScore(int points) {
+        this.score += points;
+    }
 
-
+    public void
     @Override
-    public void fire() {
-
+    public Bullet fire() {
+        //TODO: fix the coordinates of the bullet starting position
+        return new Bullet(this.getX(), this.getY(), ImageAlbum.Bullet.getPath(), currentBonus.getMultiplierForDamage());
     }
 }

@@ -9,4 +9,5 @@ public class DoubleDamageBonus extends Bonus {
     public DoubleDamageBonus(int x, int y) {
         super(x, y, ImageAlbum.DoubleDamageBonus.getPath(), MULTIPLIER);
     }
+
 }
