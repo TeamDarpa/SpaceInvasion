@@ -1,12 +1,9 @@
-package com.company.game;
+package com.company.game.concreteObjects;
 
+import com.company.game.AbstractObjects.Bonus;
+import com.company.game.AbstractObjects.GameObject;
 import com.company.gameObjectsInterfaces.Firable;
 import com.company.graphics.ImageAlbum;
-import com.company.graphics.ImageLoader;
-
-import java.awt.*;
-import java.awt.font.ImageGraphicAttribute;
-import java.awt.image.BufferedImage;
 
 /**
  * Created by stil2_000 on 2.11.2015 ã..
@@ -18,10 +15,11 @@ public class Player extends GameObject implements Firable {
     private int numberOfLives;
     private String playerName;
     private int score;
+    private Bonus currentBonus;
     //TODO: map the path with the one to the image
 
     public Player(int x, int y, String name) {
-        super(x, y, ImageAlbum.Enemy.getPath());
+        super(x, y, ImageAlbum.Player.getPath());
         this.numberOfLives = INITILAL_NUMBER_OF_LIVES;
         this.playerName = name;
         this.score = 0;

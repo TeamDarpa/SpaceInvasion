@@ -1,6 +1,4 @@
-package com.company.game;
-
-import java.awt.image.BufferedImage;
+package com.company.game.AbstractObjects;
 
 public class Bullet  extends GameObject{
 

@@ -1,10 +1,17 @@
 package com.company.game;
 
-import java.awt.*;
+import com.company.game.AbstractObjects.Bullet;
+import com.company.game.AbstractObjects.Enemy;
+import com.company.game.concreteObjects.Player;
+
+import java.util.List;
 
 
 public class Game implements Runnable {
-    private Player
+    private Player player;
+    private List<Enemy> enemiesList;
+    private List<Bullet> bulletsList;
+
     public void displayFrame(){
         //Display the current frame using the display frame;
     }
