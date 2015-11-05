@@ -1,8 +1,7 @@
 package com.company.gameObjectsInterfaces;
 
-/**
- * Created by stil2_000 on 2.11.2015 ã..
- */
+import com.company.game.concreteObjects.Bullet;
+
 public interface Firable {
-    void fire();
+    Bullet fire();
 }

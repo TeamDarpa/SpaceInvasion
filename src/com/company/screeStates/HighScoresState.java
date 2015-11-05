@@ -1,8 +1,11 @@
 package com.company.screeStates;
 
-/**
- * Created by stil2_000 on 4.11.2015 ã..
- */
-public class HighScoresState {
+
+public class HighScoresState extends State {
     //TODO: Load the resources in a three map to display the first 10
+
+    @Override
+    public void Display() {
+
+    }
 }

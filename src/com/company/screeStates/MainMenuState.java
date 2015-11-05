@@ -1,8 +1,14 @@
 package com.company.screeStates;
 
-/**
- * Created by stil2_000 on 4.11.2015 ã..
- */
-public class MainMenuState {
+public class MainMenuState extends State {
     //TODO: Display the menu with options and listen for the event clicked
+    private int currentSelection;
+
+    public MainMenuState(){
+        this.currentSelection = 1;
+    }
+    @Override
+    public void Display() {
+
+    }
 }

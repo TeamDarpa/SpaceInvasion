@@ -38,7 +38,6 @@ public class Player extends GameObject implements Firable {
         this.score += points;
     }
 
-    public void
     @Override
     public Bullet fire() {
         //TODO: fix the coordinates of the bullet starting position
