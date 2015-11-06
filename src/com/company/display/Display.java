@@ -19,7 +19,7 @@ public class Display
         this.height = height;
         initDisplay();
     }
-    
+
     private void initDisplay(){
         this.frame = new JFrame(this.title);
         this.frame.setSize(width, height);
