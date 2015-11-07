@@ -1,13 +1,13 @@
 package com.company;
 
+import com.company.game.Game;
 import com.company.screeStates.MainMenuState;
 import com.company.screeStates.State;
 
-/**
- * Created by stil2_000 on 4.11.2015 ã..
- */
 public class Main {
     public static void main(String[] args) {
         State state = new MainMenuState();
+        Game game = new Game();
+        game.start();
     }
 }

@@ -2,12 +2,12 @@ package com.company.graphics;
 
 public enum ImageAlbum {
     //If you add another object to the game you must insert it in the enumeration here in order to get it's path
-    Player("/resources/MilleniumFalcon65.png"),
-    EasyEnemy("/resources/TIEFighter65.png"),
-    SturdyEnemy("/resources/StarDestroyer65.png"),
+    Player("/MilleniumFalcon65.png"),
+    EasyEnemy("/TIEFighter65.png"),
+    SturdyEnemy("/StarDestroyer65.png"),
     DoubleDamageBonus(""),
-    Bullet("/resources/beams65.png"),
-    Background("/resources/bg.jpg");
+    Bullet("/beams65.png"),
+    Background("/bg.jpg");
 
 
 
