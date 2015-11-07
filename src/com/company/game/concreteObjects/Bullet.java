@@ -2,6 +2,8 @@ package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.GameObject;
 
+import java.awt.*;
+
 public class Bullet  extends GameObject {
 
         private int bulletStrenght;
@@ -14,5 +16,12 @@ public class Bullet  extends GameObject {
         }
         public int getBulletStrenght(){
                 return this.bulletStrenght;
+        }
+
+        public void updare() {
+
+        }
+        public void render(Graphics g){
+
         }
 }
