@@ -6,7 +6,9 @@ public enum ImageAlbum {
     EasyEnemy("/resources/TIEFighter65.png"),
     SturdyEnemy("/resources/StarDestroyer65.png"),
     DoubleDamageBonus(""),
-    Bullet("/resources/beams65.png");
+    Bullet("/resources/beams65.png"),
+    Background("/resources/bg.jpg");
+
 
 
     private String path;

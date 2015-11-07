@@ -9,10 +9,5 @@ import com.company.screeStates.State;
 public class Main {
     public static void main(String[] args) {
         State state = new MainMenuState();
-<<<<<<< HEAD
-
-=======
-        //while (state.d)
->>>>>>> 416f7614b2c3f147d95023392d5a0ea8c4c20c15
     }
 }

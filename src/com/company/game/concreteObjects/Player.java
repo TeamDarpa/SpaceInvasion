@@ -15,8 +15,8 @@ public class Player extends GameObject implements Firable {
     private Bonus currentBonus;
     //TODO: map the path with the one to the image
 
-    public Player(int x, int y, String name) {
-        super(x, y, ImageAlbum.Player.getPath());
+    public Player(int x, int y, String name, int speed) {
+        super(x, y, ImageAlbum.Player.getPath(), speed);
         this.numberOfLives = INITILAL_NUMBER_OF_LIVES;
         this.playerName = name;
         this.score = 0;
@@ -41,6 +41,6 @@ public class Player extends GameObject implements Firable {
     @Override
     public Bullet fire() {
         //TODO: fix the coordinates of the bullet starting position
-        return new Bullet(this.getX(), this.getY(), ImageAlbum.Bullet.getPath(), currentBonus.getMultiplierForDamage());
+        return new Bullet(this.getX(), this.getY(), ImageAlbum.Bullet.getPath());
     }
 }

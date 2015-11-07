@@ -5,8 +5,8 @@ public abstract class Enemy extends GameObject {
 
     private int health;
     private int pointsForPlayer;
-    public Enemy(int x, int y, int health, String path, int pointsForPlayer) {
-        super(x, y, path);
+    public Enemy(int x, int y, int health, String path, int pointsForPlayer, int speedMultiplier) {
+        super(x, y, path, speedMultiplier);
         this.health = health;
         this.pointsForPlayer = pointsForPlayer;
     }
