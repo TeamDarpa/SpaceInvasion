@@ -6,19 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="644612fb-9d8f-4563-ab3d-7f1cec25b3c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/JediStarfighter65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/MilleniumFalcon65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/SithInfiltrator65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/SlaveOne65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/StarDestroyer65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/TIEFighter65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/XWing65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/beams65.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/ImageLoader.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/ImageLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" afterPath="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Java-Teamwork.iws" />
@@ -44,8 +31,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39144737">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.13980263">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#Main#0" expanded="true" />
@@ -517,7 +504,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447063756550</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test for image paths">
+      <created>1447092205255</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1447092205255</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -564,7 +557,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="KeyListener not working" />
     <MESSAGE value="KeyListener Fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="KeyListener Fixed" />
+    <MESSAGE value="Test for image paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for image paths" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -965,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39144737">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.13980263">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#Main#0" expanded="true" />
