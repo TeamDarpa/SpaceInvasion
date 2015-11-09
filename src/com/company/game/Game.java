@@ -10,16 +10,14 @@ import com.company.graphics.ImageAlbum;
 import com.company.graphics.ImageLoader;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
-import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
 
 
 public class Game implements Runnable {
-    private Player player;
+    public static Player player;
     private List<Enemy> enemiesList;
     private List<Bullet> bulletsList;
 
@@ -28,6 +26,8 @@ public class Game implements Runnable {
 
     private Thread thread;
 
+    private KeyboardInput keyboardInput;
+
     private BufferStrategy bs;
     private Graphics g;
 
@@ -35,9 +35,7 @@ public class Game implements Runnable {
     private void init() {
 
         this.display = new Display("Star wars", 800, 600);
-        addKeyListener(new KeyboardInput(this));
-
-
+        this.keyboardInput = new KeyboardInput(this,this.display);
         this.player = new Player(350, 500, ImageAlbum.Player.getPath(), 5);
 
 
@@ -76,51 +74,6 @@ public class Game implements Runnable {
         player.update();
     }
 
-    public void keyPressed(KeyEvent e) {
-        int key = e.getKeyCode();
-
-        if (key == KeyEvent.VK_RIGHT) {
-            player.setX(player.getX() + player.getSpeed());
-
-        } else if (key == KeyEvent.VK_LEFT) {
-            player.setX(player.getX() - player.getSpeed());
-
-        } else if (key == KeyEvent.VK_UP) {
-            player.setY(player.getY() - player.getSpeed());
-
-        } else if (key == KeyEvent.VK_DOWN) {
-            player.setY(player.getY() + player.getSpeed());
-
-        } else if (key == KeyEvent.VK_BACK_SPACE) {
-
-        }
-        if (key == KeyEvent.VK_SPACE) {
-
-        }
-
-
-    }
-
-    public void keyReleased(KeyEvent e) {
-        int key = e.getKeyCode();
-
-        if (key == KeyEvent.VK_RIGHT) {
-            player.setX(player.getX() + 0);
-
-        } else if (key == KeyEvent.VK_LEFT) {
-            player.setX(player.getX() - 0);
-
-        } else if (key == KeyEvent.VK_UP) {
-            player.setY(player.getY() - 0);
-        } else if (key == KeyEvent.VK_DOWN) {
-            player.setY(player.getY() + 0);
-        }
-
-        if (key == KeyEvent.VK_SPACE) {
-
-        }
-    }
-
     public synchronized void start() {
         if (isRuning) {
             return;
@@ -147,34 +100,19 @@ public class Game implements Runnable {
     @Override
     public void run() {
         init();
-        long lastTime = System.nanoTime();
-        final double FPS = 60.0;
-        double ns = 1000000000 / FPS;
-        double delta = 0;
-        int updates = 0;
-        int frames = 0;
-        long timer = System.currentTimeMillis();
+
 
         while (isRuning) {
-            long now = System.nanoTime();
-            delta += (now - lastTime) / ns;
-            lastTime = now;
 
-            if (delta >= 1) {
-                update();
-                updates++;
-                delta--;
-            }
+            update();
             displayFrame();
-            frames++;
 
-            if (System.currentTimeMillis() - timer > 1000) {
-                timer += 1000;
-                System.out.println(updates + " Ticks, Frames " + frames);
-                updates = 0;
-                frames = 0;
-            }
+
         }
+
         stop();
+
     }
+
 }
+

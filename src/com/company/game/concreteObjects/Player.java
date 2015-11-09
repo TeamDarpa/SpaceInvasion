@@ -19,6 +19,13 @@ public class Player extends GameObject implements Firable {
     private int score;
     private Bonus currentBonus;
 
+    public static boolean
+            isMovingLeft = false,
+            isMovingRight = false,
+            isMovingUp = false,
+            isMovingDown = false,
+            isFiring = false;
+
     //TODO: map the path with the one to the image
 
     public Player(int x, int y, String name, int speed) {
@@ -30,6 +37,16 @@ public class Player extends GameObject implements Firable {
     }
 
     public void update() {
+        if (isMovingRight) {
+            this.setX(this.getX() + this.getSpeed());
+        } else if (isMovingLeft) {
+            this.setX(this.getX() - this.getSpeed());
+        } else if (isMovingDown) {
+            this.setY(this.getY() + this.getSpeed());
+        } else if(isMovingUp) {
+            this.setY(this.getY() - this.getSpeed());
+        }
+        
 
     }
 
