@@ -6,7 +6,7 @@ import com.company.screeStates.State;
 
 public class Main {
     public static void main(String[] args) {
-        State state = new MainMenuState();
+      //  State state = new MainMenuState();
         Game game = new Game();
 
         game.start();
