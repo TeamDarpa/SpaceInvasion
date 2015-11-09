@@ -2,8 +2,13 @@ package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.Bonus;
 import com.company.game.AbstractObjects.GameObject;
+import com.company.game.Game;
 import com.company.gameObjectsInterfaces.Firable;
 import com.company.graphics.ImageAlbum;
+import com.company.graphics.ImageLoader;
+
+import java.awt.*;
+import java.awt.image.BufferedImage;
 
 
 public class Player extends GameObject implements Firable {
@@ -13,6 +18,14 @@ public class Player extends GameObject implements Firable {
     private String playerName;
     private int score;
     private Bonus currentBonus;
+
+    public static boolean
+            isMovingLeft = false,
+            isMovingRight = false,
+            isMovingUp = false,
+            isMovingDown = false,
+            isFiring = false;
+
     //TODO: map the path with the one to the image
 
     public Player(int x, int y, String name, int speed) {
@@ -20,6 +33,30 @@ public class Player extends GameObject implements Firable {
         this.numberOfLives = INITILAL_NUMBER_OF_LIVES;
         this.playerName = name;
         this.score = 0;
+
+    }
+
+    public void update() {
+        if (isMovingRight && this.getX() + this.getSpeed() <= 730) {
+            this.setX(this.getX() + this.getSpeed());
+        } else if (isMovingLeft && this.getX() + this.getSpeed() >= 0) {
+            this.setX(this.getX() - this.getSpeed());
+        } else if (isMovingDown && this.getY() + this.getSpeed() < 520) {
+            this.setY(this.getY() + this.getSpeed());
+        } else if (isMovingUp && this.getY() - this.getSpeed() >= 0) {
+            this.setY(this.getY() - this.getSpeed());
+        }
+
+        if (isFiring) {
+            Game.bulletsList.add(new Bullet(this.getX() + 15, this.getY(), ImageAlbum.Bullet.getPath()));
+        }
+
+
+    }
+
+    public void render(Graphics g) {
+
+        g.drawImage(this.getPlayerIcon(), this.getX(), this.getY(), null);
     }
 
     public int getScore() {

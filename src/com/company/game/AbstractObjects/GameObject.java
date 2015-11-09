@@ -23,6 +23,7 @@ public class GameObject {
         this.gameObjectIcon = ImageLoader.loadImage(path);
         this.colliderBox = new Rectangle(this.gameObjectIcon.getWidth(), this.gameObjectIcon.getHeight());
     }
+
     public int getX() {
         return this.x;
     }
@@ -33,5 +34,17 @@ public class GameObject {
 
     public BufferedImage getPlayerIcon() {
         return this.gameObjectIcon;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getSpeed() {
+        return speed;
     }
 }
