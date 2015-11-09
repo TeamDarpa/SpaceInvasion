@@ -37,16 +37,20 @@ public class Player extends GameObject implements Firable {
     }
 
     public void update() {
-        if (isMovingRight) {
+        if (isMovingRight && this.getX() + this.getSpeed() <= 730) {
             this.setX(this.getX() + this.getSpeed());
-        } else if (isMovingLeft) {
+        } else if (isMovingLeft && this.getX() + this.getSpeed() >= 0) {
             this.setX(this.getX() - this.getSpeed());
-        } else if (isMovingDown) {
+        } else if (isMovingDown && this.getY() + this.getSpeed() < 520) {
             this.setY(this.getY() + this.getSpeed());
-        } else if(isMovingUp) {
+        } else if (isMovingUp && this.getY() - this.getSpeed() >= 0) {
             this.setY(this.getY() - this.getSpeed());
         }
-        
+
+        if (isFiring) {
+            Game.bulletsList.add(new Bullet(this.getX() + 15, this.getY(), ImageAlbum.Bullet.getPath()));
+        }
+
 
     }
 

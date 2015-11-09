@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="644612fb-9d8f-4563-ab3d-7f1cec25b3c3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/bullet.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/Bullet.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/Bullet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/Game.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/ImageAlbum.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/ImageAlbum.class" />
+      <change type="MODIFICATION" beforePath="E:\This Is THE project\SpaceInvasion\out\production\Java-Teamwork\com\company\game\concreteObjects\Player.class" afterPath="E:\This Is THE project\SpaceInvasion\out\production\Java-Teamwork\com\company\game\concreteObjects\Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/game/concreteObjects/Bullet.java" afterPath="$PROJECT_DIR$/src/com/company/game/concreteObjects/Bullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/game/Game.java" afterPath="$PROJECT_DIR$/src/com/company/game/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" afterPath="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/game/concreteObjects/KeyboardInput.java" afterPath="$PROJECT_DIR$/src/com/company/game/concreteObjects/KeyboardInput.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/game/concreteObjects/Player.java" afterPath="$PROJECT_DIR$/src/com/company/game/concreteObjects/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -36,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+              <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
               <folding>
                 <element signature="method#Player#0;class#Player#0" expanded="true" />
                 <element signature="method#render#0;class#Player#0" expanded="true" />
@@ -46,16 +51,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyboardInput.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/KeyboardInput.java">
+      <file leaf-file-name="ImageAlbum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding>
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyboardInput.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/KeyboardInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49671054">
+              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#KeyboardInput#0;class#KeyboardInput#0" expanded="true" />
                 <element signature="method#keyTyped#0;class#KeyboardInput#0" expanded="true" />
-                <element signature="method#keyReleased#0;class#KeyboardInput#0" expanded="true" />
+                <element signature="method#keyPressed#0;class#KeyboardInput#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,9 +83,10 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#init#0;class#Game#0" expanded="true" />
                 <element signature="method#displayFrame#0;class#Game#0" expanded="true" />
                 <element signature="method#update#0;class#Game#0" expanded="true" />
                 <element signature="method#start#0;class#Game#0" expanded="true" />
@@ -78,14 +97,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/display/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55263156">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="method#Display#0;class#Display#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="method#initDisplay#0;class#Display#0" expanded="true" />
                 <element signature="e#1158#1159#0" expanded="true" />
               </folding>
             </state>
@@ -96,19 +115,30 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/game/AbstractObjects/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="method#GameObject#0;class#GameObject#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#925#926#0" expanded="true" />
+                <element signature="e#979#980#0" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1065#1066#0" expanded="true" />
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1208#1209#0" expanded="true" />
+                <element signature="e#1236#1237#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoubleDamageBonus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/DoubleDamageBonus.java">
+      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageLoader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="method#DoubleDamageBonus#0;class#DoubleDamageBonus#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,26 +148,14 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Bullet#0;class#Bullet#0" expanded="true" />
-                <element signature="method#updare#0;class#Bullet#0" expanded="true" />
-                <element signature="method#render#0;class#Bullet#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenuState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/screeStates/MainMenuState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-              <folding>
-                <element signature="e#213#214#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="method#Display#0;class#MainMenuState#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,7 +179,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="method#SturdyEnemy#0;class#SturdyEnemy#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,15 +231,15 @@
         <option value="$PROJECT_DIR$/src/com/company/game/AbstractObjects/Bonus.java" />
         <option value="$PROJECT_DIR$/src/com/company/game/AbstractObjects/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/company/graphics/ImageLoader.java" />
-        <option value="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/game/concreteObjects/EasyEnemy.java" />
         <option value="$PROJECT_DIR$/src/com/company/InputHandler/KeyInput.java" />
+        <option value="$PROJECT_DIR$/src/com/company/display/Display.java" />
+        <option value="$PROJECT_DIR$/src/com/company/game/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" />
+        <option value="$PROJECT_DIR$/src/com/company/game/concreteObjects/Player.java" />
         <option value="$PROJECT_DIR$/src/com/company/game/concreteObjects/Bullet.java" />
         <option value="$PROJECT_DIR$/src/com/company/game/concreteObjects/KeyboardInput.java" />
-        <option value="$PROJECT_DIR$/src/com/company/game/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/company/game/concreteObjects/Player.java" />
-        <option value="$PROJECT_DIR$/src/com/company/display/Display.java" />
       </list>
     </option>
   </component>
@@ -485,6 +505,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\This Is THE project\SpaceInvasion\res" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -661,7 +686,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446902846378</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="KeyListener Fixed">
+      <created>1447063756550</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447063756550</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -707,11 +738,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="KeyListener not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="KeyListener not working" />
+    <MESSAGE value="KeyListener Fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="KeyListener Fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -981,6 +1013,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+          <folding>
+            <element signature="e#439#440#0" expanded="false" />
+            <element signature="e#486#487#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,23 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30493274">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/EasyEnemy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48281017">
@@ -1039,19 +1058,6 @@
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="method#DoubleDamageBonus#0;class#DoubleDamageBonus#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/Bullet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Bullet#0;class#Bullet#0" expanded="true" />
-            <element signature="method#updare#0;class#Bullet#0" expanded="true" />
-            <element signature="method#render#0;class#Bullet#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1083,24 +1089,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="method#SturdyEnemy#0;class#SturdyEnemy#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/display/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="method#Display#0;class#Display#0" expanded="true" />
+            <element signature="method#initDisplay#0;class#Display#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/game/AbstractObjects/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="method#GameObject#0;class#GameObject#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#init#0;class#Game#0" expanded="true" />
             <element signature="method#displayFrame#0;class#Game#0" expanded="true" />
             <element signature="method#update#0;class#Game#0" expanded="true" />
             <element signature="method#start#0;class#Game#0" expanded="true" />
@@ -1110,15 +1152,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/KeyboardInput.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/Bullet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#KeyboardInput#0;class#KeyboardInput#0" expanded="true" />
-            <element signature="method#keyTyped#0;class#KeyboardInput#0" expanded="true" />
-            <element signature="method#keyReleased#0;class#KeyboardInput#0" expanded="true" />
+            <element signature="method#Bullet#0;class#Bullet#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1126,7 +1181,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="true" />
             <element signature="method#render#0;class#Player#0" expanded="true" />
@@ -1135,14 +1190,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/display/Display.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/game/concreteObjects/KeyboardInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55263156">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.49671054">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
           <folding>
-            <element signature="method#Display#0;class#Display#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#KeyboardInput#0;class#KeyboardInput#0" expanded="true" />
+            <element signature="method#keyTyped#0;class#KeyboardInput#0" expanded="true" />
+            <element signature="method#keyPressed#0;class#KeyboardInput#0" expanded="true" />
           </folding>
         </state>
       </provider>

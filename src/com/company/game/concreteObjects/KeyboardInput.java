@@ -3,7 +3,6 @@ package com.company.game.concreteObjects;
 import com.company.display.Display;
 import com.company.game.Game;
 
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -44,13 +43,13 @@ public class KeyboardInput implements KeyListener {
         } else if (key == KeyEvent.VK_BACK_SPACE) {
 
         }
-        if(Game.player.isFiring == false) {
-            if (key == KeyEvent.VK_SPACE) {
+        if (key == KeyEvent.VK_SPACE && Game.player.isFiring == false) {
 
-                Game.player.isFiring = true;
-            }
+
+            Game.player.isFiring = true;
         }
     }
+
 
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
@@ -73,9 +72,8 @@ public class KeyboardInput implements KeyListener {
         } else if (key == KeyEvent.VK_BACK_SPACE) {
 
         }
-        if (key == KeyEvent.VK_SPACE) {
+        if (key == KeyEvent.VK_SPACE && Game.player.isFiring == true) {
             Game.player.isFiring = false;
         }
-
     }
 }
