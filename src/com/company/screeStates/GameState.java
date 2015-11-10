@@ -7,8 +7,10 @@ import com.company.game.concreteObjects.EasyEnemy;
 import com.company.game.concreteObjects.Player;
 import com.company.game.concreteObjects.SturdyEnemy;
 import com.company.graphics.Assets;
+import javafx.scene.text.*;
 
 import java.awt.*;
+import java.awt.Font;
 import java.util.*;
 import java.util.List;
 
@@ -17,8 +19,11 @@ public class GameState extends State implements Displayable{
     public static List<Enemy> enemiesList;
     public static List<Bullet> bulletsList;
     public Random rnd = new Random();
+    private long lastTimeMissed,now;
     public static int score = 0;
     private int enemyTypes = 1;
+    private boolean explode;
+    private int cropX,cropY;
 
     public GameState() {
         init();
@@ -37,10 +42,14 @@ public class GameState extends State implements Displayable{
 
     @Override
     public void update() {
-        player.update();
+        if(!explode) {
+            player.update();
+        }
         if(Enemy.passed >= 3){          //if player misses three enemies loses one live
             player.setNumberOfLives(player.getNumberOfLives()-1);
+            lastTimeMissed = System.currentTimeMillis();
             Enemy.passed = 0;
+            enemiesList.clear();
         }
         for (int i = 0; i < bulletsList.size(); i++) {
             bulletsList.get(i).update();
@@ -49,10 +58,13 @@ public class GameState extends State implements Displayable{
 
             if(player.collide(enemiesList.get(i).getColliderBox())) {
                 player.setNumberOfLives(player.getNumberOfLives()-1);
-                enemiesList.remove(i);
+                explode = true;
+                enemiesList.get(i).setColliderBox(new Rectangle(0,0,1,1));
                 break;
             }
-            enemiesList.get(i).update();
+            if(!explode) {
+                enemiesList.get(i).update();
+            }
         }
         if (enemiesList.size()<3) {
             if (enemyTypes == 3) {
@@ -64,7 +76,21 @@ public class GameState extends State implements Displayable{
         if(player.getNumberOfLives()==0) {
             StateManager.setCurrentState(new GameOverState());
         }
+        if (explode) {
+            cropX++;
+            if (cropX >= 8) {
+                cropY++;
+                cropX = 0;
+            }
+            if (cropY >= 6) {
+                explode = false;
+                enemiesList.clear();
+                player.setX(350);
+                player.setY(500);
+                cropX = cropY = 0;
+            }
 
+        }
 
 
 
@@ -86,6 +112,15 @@ public class GameState extends State implements Displayable{
         g.drawString("Lives:", 570, 50);
         for (int i = 0; i < player.getNumberOfLives(); i++) {
             g.drawImage(Assets.live,660+i*38,30,null);
+        }
+        now = System.currentTimeMillis();
+        if (now-lastTimeMissed < 3000) {
+            g.setFont(new Font("redensek", Font.CENTER_BASELINE,50));
+            g.drawString("You've missed three enemies",50,200);
+        }
+        if (explode) {
+                g.drawImage(Assets.explosion.crop(cropX, cropY), player.getX()-20, player.getY(), null);
+
         }
 
     }

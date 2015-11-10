@@ -23,6 +23,7 @@ public class Assets {
     public static BufferedImage highScoresBackground;
     public static BufferedImage live;
     public static BufferedImage gameover;
+    public static SpriteSheet explosion;
 
     private static SortedMap<String,Integer> scores;
     public static Map<String,Integer> highScores;
@@ -38,6 +39,7 @@ public class Assets {
         //doubleDamageBonus = ImageLoader.loadImage(ImageAlbum.DoubleDamageBonus.getPath());
         highScoresBackground = ImageLoader.loadImage(ImageAlbum.HighScores.getPath());
         gameover = ImageLoader.loadImage(ImageAlbum.Gameover.getPath());
+        explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()),100,100);
         try {
             GraphicsEnvironment ge =
                     GraphicsEnvironment.getLocalGraphicsEnvironment();

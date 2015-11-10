@@ -10,7 +10,8 @@ public enum ImageAlbum {
     Background("/bg.jpg"),
     Live("/live.png"),
     Gameover("/gameover.jpg"),
-    HighScores("/highScores.png");
+    HighScores("/highScores.png"),
+    Explosion("/explosion.png");
 
 
 
