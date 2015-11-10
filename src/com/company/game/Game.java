@@ -3,9 +3,11 @@ package com.company.game;
 
 import com.company.display.Display;
 import com.company.game.concreteObjects.KeyboardInput;
+import com.company.game.concreteObjects.MouseInput;
 import com.company.screeStates.*;
 
 import java.awt.*;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 
 
@@ -16,6 +18,8 @@ public class Game implements Runnable {
 
     private Display display;
     private boolean isRuning = false;
+
+    private MouseInput mouseInput;
 
     private Thread thread;
 
@@ -33,6 +37,8 @@ public class Game implements Runnable {
     private void init() {
         this.display = new Display("Space Invasion", 800, 600);
         this.keyboardInput = new KeyboardInput(this,this.display);
+        this.mouseInput =new MouseInput(this.display);
+
         gameState = new GameState();
         menuState = new MainMenuState();
         gameOverState = new GameOverState();
@@ -65,6 +71,7 @@ public class Game implements Runnable {
         if(StateManager.getCurrentState()!=null) {
             StateManager.getCurrentState().update();
         }
+
     }
 
     public synchronized void start() {
