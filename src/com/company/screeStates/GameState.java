@@ -1,5 +1,6 @@
 package com.company.screeStates;
 
+import com.company.game.AbstractObjects.Bonus;
 import com.company.game.AbstractObjects.Enemy;
 import com.company.game.concreteObjects.Bullet;
 import com.company.game.concreteObjects.EasyEnemy;
@@ -18,6 +19,7 @@ public class GameState extends State implements Displayable {
     public static Player player;
     public static List<Enemy> enemiesList;
     public static List<Bullet> bulletsList;
+    public static List<Bonus> bonusList;
     public Random rnd = new Random();
     private long lastTimeMissed, now;
     public static int score = 0;
@@ -32,6 +34,7 @@ public class GameState extends State implements Displayable {
         this.bulletsList = new LinkedList<>();
         this.player = new Player(350, 500, "Player", 14);
         this.enemiesList = new LinkedList<>();
+        this.bonusList = new LinkedList<>();
         enemiesList.add(new EasyEnemy(rnd.nextInt(725), -100));
     }
 
@@ -111,6 +114,10 @@ public class GameState extends State implements Displayable {
 
         g.drawImage(Assets.background, 0, 0, null);
         player.display(g);
+
+        for(int i = 0; i < bonusList.size(); i++){
+            bonusList.get(i).display(g);
+        }
 
         for (int i = 0; i < bulletsList.size(); i++) {
             bulletsList.get(i).display(g);

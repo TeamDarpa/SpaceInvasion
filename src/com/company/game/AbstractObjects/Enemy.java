@@ -1,10 +1,13 @@
 package com.company.game.AbstractObjects;
 
+import com.company.game.concreteObjects.DoubleDamageBonus;
 import com.company.graphics.Assets;
+import com.company.helperClasses.RandomGenerator;
 import com.company.screeStates.GameState;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.Random;
 
 public abstract class Enemy extends GameObject {
 
@@ -51,6 +54,10 @@ public abstract class Enemy extends GameObject {
 
         if(this.getHealth()==0) {
             GameState.enemiesList.remove(this);
+            double chanceToGenerateBonus = RandomGenerator.getNextRandom();
+            if (chanceToGenerateBonus > 0.7){
+                GameState.bonusList.add(new DoubleDamageBonus(this.getX(), this.getY()));
+            }
             GameState.score+=this.getPointsForPlayer();
         }
     }

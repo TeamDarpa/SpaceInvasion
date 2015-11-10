@@ -37,7 +37,7 @@ public class Assets {
         easyEnemy = ImageLoader.loadImage(ImageAlbum.EasyEnemy.getPath());
         sturdyEnemy = ImageLoader.loadImage(ImageAlbum.SturdyEnemy.getPath());
         live = ImageLoader.loadImage(ImageAlbum.Live.getPath());
-        //doubleDamageBonus = ImageLoader.loadImage(ImageAlbum.DoubleDamageBonus.getPath());
+        doubleDamageBonus = ImageLoader.loadImage(ImageAlbum.DoubleDamageBonus.getPath());
         highScoresBackground = ImageLoader.loadImage(ImageAlbum.HighScores.getPath());
         gameover = ImageLoader.loadImage(ImageAlbum.Gameover.getPath());
         explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()),100,100);

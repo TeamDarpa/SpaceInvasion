@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.game.Game;
+import com.company.helperClasses.RandomGenerator;
 import com.company.screeStates.MainMenuState;
 import com.company.screeStates.State;
 

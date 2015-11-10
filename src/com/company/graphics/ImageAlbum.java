@@ -6,7 +6,7 @@ public enum ImageAlbum {
     Player("/MilleniumFalcon65.png"),
     EasyEnemy("/TIEFighter65.png"),
     SturdyEnemy("/StarDestroyer65.png"),
-    DoubleDamageBonus(""),
+    DoubleDamageBonus("/x2Bonus.png"),
     Bullet("/bullet.png"),
     Background("/bg.jpg"),
     Live("/live.png"),
