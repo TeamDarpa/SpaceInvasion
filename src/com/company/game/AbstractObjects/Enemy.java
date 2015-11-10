@@ -53,8 +53,8 @@ public abstract class Enemy extends GameObject {
             GameState.score+=this.getPointsForPlayer();
         }
     }
-
-    public void render(Graphics g) {
+    @Override
+    public void display(Graphics g) {
         g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
     }
 

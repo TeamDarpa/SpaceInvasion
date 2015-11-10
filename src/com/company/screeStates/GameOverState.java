@@ -1,5 +1,6 @@
 package com.company.screeStates;
 
+import com.company.gameObjectsInterfaces.Displayable;
 import com.company.graphics.Assets;
 
 import java.awt.*;

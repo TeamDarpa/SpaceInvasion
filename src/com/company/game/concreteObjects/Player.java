@@ -27,8 +27,6 @@ public class Player extends GameObject implements Firable {
             isMovingDown = false,
             isFiring = false;
 
-    //TODO: map the path with the one to the image
-
     public Player(int x, int y, String name, int speed) {
         super(x, y, Assets.player, speed);
         this.numberOfLives = INITILAL_NUMBER_OF_LIVES;
@@ -64,8 +62,8 @@ public class Player extends GameObject implements Firable {
     public void setNumberOfLives(int numberOfLives) {
         this.numberOfLives = numberOfLives;
     }
-
-    public void render(Graphics g) {
+    @Override
+    public void display(Graphics g) {
 
         g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
 

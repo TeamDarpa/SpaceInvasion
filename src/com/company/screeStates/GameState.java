@@ -5,8 +5,8 @@ import com.company.game.concreteObjects.Bullet;
 import com.company.game.concreteObjects.EasyEnemy;
 import com.company.game.concreteObjects.Player;
 import com.company.game.concreteObjects.SturdyEnemy;
+import com.company.gameObjectsInterfaces.Displayable;
 import com.company.graphics.Assets;
-import javafx.scene.text.*;
 
 import java.awt.*;
 import java.awt.Font;
@@ -110,14 +110,14 @@ public class GameState extends State implements Displayable {
     public void display(Graphics g) {
 
         g.drawImage(Assets.background, 0, 0, null);
-        player.render(g);
+        player.display(g);
 
         for (int i = 0; i < bulletsList.size(); i++) {
-            bulletsList.get(i).render(g);
+            bulletsList.get(i).display(g);
         }
 
         for (int i = 0; i < enemiesList.size(); i++) {
-            enemiesList.get(i).render(g);
+            enemiesList.get(i).display(g);
         }
 
         g.setFont(new Font("redensek", Font.PLAIN, 40));
