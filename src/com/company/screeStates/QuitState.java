@@ -1,13 +1,21 @@
 package com.company.screeStates;
 
+import java.awt.*;
+
 /**
- * Created by stil2_000 on 4.11.2015 ã..
+ * Created by stil2_000 on 4.11.2015 ï¿½..
  */
 public class QuitState extends State {
-    //TODO: Display Credits?
-
     @Override
-    public void Display() {
+    public void update() {
 
     }
+
+    @Override
+    public void display(Graphics g) {
+
+    }
+    //TODO: Display Credits?
+
+
 }

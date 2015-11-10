@@ -2,25 +2,17 @@ package com.company.game;
 
 
 import com.company.display.Display;
-import com.company.game.concreteObjects.Bullet;
-import com.company.game.AbstractObjects.Enemy;
 import com.company.game.concreteObjects.KeyboardInput;
-import com.company.game.concreteObjects.Player;
-import com.company.graphics.ImageAlbum;
-import com.company.graphics.ImageLoader;
+import com.company.screeStates.*;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
-import java.util.LinkedList;
-import java.util.List;
+
+
 
 
 
 public class Game implements Runnable {
-    public static Player player;
-    private List<Enemy> enemiesList;
-    public static List<Bullet> bulletsList;
 
     private Display display;
     private boolean isRuning = false;
@@ -31,13 +23,21 @@ public class Game implements Runnable {
 
     private BufferStrategy bs;
     private Graphics g;
+    private State gameState;
+    private State menuState;
+    private State gameOverState;
+    private State highScoreState;
+
 
 
     private void init() {
         this.display = new Display("Star wars", 800, 600);
-        this.keyboardInput = new KeyboardInput(this, this.display);
-        this.bulletsList = new LinkedList<>();
-        this.player = new Player(350, 500, ImageAlbum.Player.getPath(), 5);
+        this.keyboardInput = new KeyboardInput(this,this.display);
+        gameState = new GameState();
+        menuState = new MainMenuState();
+        gameOverState = new GameOverState();
+        highScoreState = new HighScoresState();
+        StateManager.setCurrentState(gameState);
     }
 
     public void displayFrame() {
@@ -53,25 +53,17 @@ public class Game implements Runnable {
 
         g.clearRect(0, 0, 800, 600);
 
-        BufferedImage bgImg = ImageLoader.loadImage(ImageAlbum.Background.getPath());
-        g.drawImage(bgImg, 0, 0, null);
-        player.render(g);
-        for (int i = 0; i < bulletsList.size(); i++) {
-            bulletsList.get(i).render(g);
+        if(StateManager.getCurrentState()!=null) {
+            StateManager.getCurrentState().display(g);
         }
-
         ////////////// TO HERE////////////
         g.dispose();
         bs.show();
     }
 
     public void update() {
-        //TODO: Implement collision detection
-        //TODO: Listen for input from the user
-        //TODO: update the states of the objects;
-        player.update();
-        for (int i = 0; i < bulletsList.size(); i++) {
-            bulletsList.get(i).update();
+        if(StateManager.getCurrentState()!=null) {
+            StateManager.getCurrentState().update();
         }
     }
 
@@ -82,7 +74,7 @@ public class Game implements Runnable {
         isRuning = true;
         thread = new Thread(this);
         thread.start();
-        run();
+
     }
 
     public synchronized void stop() {
@@ -101,13 +93,33 @@ public class Game implements Runnable {
     @Override
     public void run() {
         init();
+        int fps = 30;
+        double timePerTick = 1_000_000_000.0 / fps;
+        double delta = 0;
+        long now;
+        long lastTime = System.nanoTime();
+        long timer = 0;
+        int ticks = 0;
+
         while (isRuning) {
-            update();
-            displayFrame();
+            now = System.nanoTime();
+            delta += (now-lastTime) / timePerTick;
+            timer += now - lastTime;
+            lastTime = now;
+            if (delta >= 1) {
+                this.update();
+                this.displayFrame();
+                ticks++;
+                delta--;
+            }
+
+            if (timer >= 1_000_000_000) {
+                ticks = 0;
+                timer = 0;
+            }
         }
         stop();
     }
 
 
 }
-

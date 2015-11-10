@@ -2,17 +2,18 @@ package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.GameObject;
 import com.company.game.Game;
+import com.company.graphics.Assets;
+import com.company.screeStates.GameState;
 
 import java.awt.*;
-
 public class Bullet extends GameObject {
 
     private int bulletStrenght;
-    private static final int speedMultiplier = 1;
+    private static final int speedMultiplier = 5;
     private static final int strenghtMultiplier = 1;
 
-    public Bullet(int x, int y, String path) {
-        super(x, y, path, speedMultiplier);
+    public Bullet(int x, int y) {
+        super(x, y, Assets.bullet, speedMultiplier);
         this.bulletStrenght = 1;
         this.bulletStrenght *= strenghtMultiplier;
     }
@@ -22,13 +23,14 @@ public class Bullet extends GameObject {
     }
 
     public void update() {
+        this.getColliderBox().setBounds(this.getX(),this.getY(),this.getObjectIcon().getWidth(),this.getObjectIcon().getHeight());
         this.setY(this.getY() - this.getSpeed() * speedMultiplier);
         if (this.getY() == 0) {
-            Game.bulletsList.remove(this);
+            GameState.bulletsList.remove(this);
         }
     }
 
     public void render(Graphics g) {
-        g.drawImage(this.getPlayerIcon(), this.getX(), this.getY(), null);
+        g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
     }
 }

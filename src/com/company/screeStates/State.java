@@ -1,12 +1,13 @@
 package com.company.screeStates;
 
-/**
- * Created by stil2_000 on 4.11.2015 ã..
- */
+
+import java.awt.*;
+
 public abstract class State implements Displayable{
 
+    public abstract void update();
     @Override
-    public void Display() {
+    public void display(Graphics g) {
 
     }
 }

@@ -2,6 +2,7 @@ package com.company.game.concreteObjects;
 
 import com.company.display.Display;
 import com.company.game.Game;
+import com.company.screeStates.GameState;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -23,27 +24,27 @@ public class KeyboardInput implements KeyListener {
         int key = e.getKeyCode();
 
         if (key == KeyEvent.VK_RIGHT) {
-            Game.player.isMovingRight = true;
+            GameState.player.isMovingRight = true;
 
         } else if (key == KeyEvent.VK_LEFT) {
-            Game.player.isMovingLeft = true;
+            GameState.player.isMovingLeft = true;
 
 
         } else if (key == KeyEvent.VK_UP) {
-            Game.player.isMovingUp = true;
+            GameState.player.isMovingUp = true;
 
 
         } else if (key == KeyEvent.VK_DOWN) {
-            Game.player.isMovingDown = true;
+            GameState.player.isMovingDown = true;
 
 
         } else if (key == KeyEvent.VK_BACK_SPACE) {
 
         }
-        if (key == KeyEvent.VK_SPACE && Game.player.isFiring == false) {
+        if (key == KeyEvent.VK_SPACE && GameState.player.isFiring == false) {
 
 
-            Game.player.isFiring = true;
+            GameState.player.isFiring = true;
         }
     }
 
@@ -52,25 +53,25 @@ public class KeyboardInput implements KeyListener {
         int key = e.getKeyCode();
 
         if (key == KeyEvent.VK_RIGHT) {
-            Game.player.isMovingRight = false;
+            GameState.player.isMovingRight = false;
 
         } else if (key == KeyEvent.VK_LEFT) {
-            Game.player.isMovingLeft = false;
+            GameState.player.isMovingLeft = false;
 
 
         } else if (key == KeyEvent.VK_UP) {
-            Game.player.isMovingUp = false;
+            GameState.player.isMovingUp = false;
 
 
         } else if (key == KeyEvent.VK_DOWN) {
-            Game.player.isMovingDown = false;
+            GameState.player.isMovingDown = false;
 
 
         } else if (key == KeyEvent.VK_BACK_SPACE) {
 
         }
-        if (key == KeyEvent.VK_SPACE && Game.player.isFiring == true) {
-            Game.player.isFiring = false;
+        if (key == KeyEvent.VK_SPACE && GameState.player.isFiring == true) {
+            GameState.player.isFiring = false;
         }
     }
 }

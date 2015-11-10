@@ -1,7 +1,10 @@
 package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.Enemy;
+import com.company.game.Game;
+import com.company.graphics.Assets;
 import com.company.graphics.ImageAlbum;
+import com.company.screeStates.GameState;
 
 import java.awt.*;
 
@@ -10,16 +13,11 @@ public class EasyEnemy extends Enemy {
 
     private static final int HEALTH = 1;
     private static final int POINTS_FOR_PLAYER = 5;
-    private static final int SPEED_MULTIPLIER = 1;
+    private static final int SPEED_MULTIPLIER = 3;
+                    //number of enemies that were not destroed and passed. If player missed three enemies lose one life.
     public EasyEnemy(int x, int y) {
-        super(x, y, HEALTH, ImageAlbum.EasyEnemy.getPath(), POINTS_FOR_PLAYER, SPEED_MULTIPLIER);
+        super(x, y, HEALTH, Assets.easyEnemy, POINTS_FOR_PLAYER, SPEED_MULTIPLIER);
     }
 
-    public void update() {
 
-    }
-
-    public void render(Graphics g) {
-
-    }
 }

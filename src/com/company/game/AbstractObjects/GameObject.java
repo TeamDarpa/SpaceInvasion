@@ -16,12 +16,13 @@ public class GameObject {
     private Rectangle colliderBox;
     private BufferedImage gameObjectIcon;
 
-    public GameObject(int x, int y, String path, int speedMultiplier) {
+    public GameObject(int x, int y, BufferedImage gameObjectIcon, int speedMultiplier) {
         this.x = x;
         this.y = y;
-        this.speed = 1 * speedMultiplier;
-        this.gameObjectIcon = ImageLoader.loadImage(path);
-        this.colliderBox = new Rectangle(this.gameObjectIcon.getWidth(), this.gameObjectIcon.getHeight());
+        this.speed = speedMultiplier;
+        this.gameObjectIcon = gameObjectIcon;
+        this.colliderBox = new Rectangle(this.x,this.y,this.gameObjectIcon.getWidth(), this.gameObjectIcon.getHeight());
+
     }
 
     public int getX() {
@@ -32,7 +33,7 @@ public class GameObject {
         return this.y;
     }
 
-    public BufferedImage getPlayerIcon() {
+    public BufferedImage getObjectIcon() {
         return this.gameObjectIcon;
     }
 
@@ -46,5 +47,18 @@ public class GameObject {
 
     public int getSpeed() {
         return speed;
+    }
+
+    public Rectangle getColliderBox() {
+        return colliderBox;
+    }
+
+    public void setColliderBox(Rectangle colliderBox) {
+        this.colliderBox = colliderBox;
+    }
+
+    public boolean collide(Rectangle r) {
+        if (this.colliderBox.intersects(r)) return true;
+        return false;
     }
 }

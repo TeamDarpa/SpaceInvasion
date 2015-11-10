@@ -4,8 +4,10 @@ import com.company.game.AbstractObjects.Bonus;
 import com.company.game.AbstractObjects.GameObject;
 import com.company.game.Game;
 import com.company.gameObjectsInterfaces.Firable;
+import com.company.graphics.Assets;
 import com.company.graphics.ImageAlbum;
 import com.company.graphics.ImageLoader;
+import com.company.screeStates.GameState;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -29,7 +31,7 @@ public class Player extends GameObject implements Firable {
     //TODO: map the path with the one to the image
 
     public Player(int x, int y, String name, int speed) {
-        super(x, y, ImageAlbum.Player.getPath(), speed);
+        super(x, y, Assets.player, speed);
         this.numberOfLives = INITILAL_NUMBER_OF_LIVES;
         this.playerName = name;
         this.score = 0;
@@ -37,26 +39,37 @@ public class Player extends GameObject implements Firable {
     }
 
     public void update() {
+
+        this.getColliderBox().setBounds(this.getX(),this.getY(),this.getObjectIcon().getWidth(),this.getObjectIcon().getHeight());
         if (isMovingRight && this.getX() + this.getSpeed() <= 730) {
             this.setX(this.getX() + this.getSpeed());
-        } else if (isMovingLeft && this.getX() + this.getSpeed() >= 0) {
+        }
+        if (isMovingLeft && this.getX() + this.getSpeed() >= 0) {
             this.setX(this.getX() - this.getSpeed());
-        } else if (isMovingDown && this.getY() + this.getSpeed() < 520) {
+        }
+        if (isMovingDown && this.getY() + this.getSpeed() < 520) {
             this.setY(this.getY() + this.getSpeed());
-        } else if (isMovingUp && this.getY() - this.getSpeed() >= 0) {
+        }
+        if (isMovingUp && this.getY() - this.getSpeed() >= 0) {
             this.setY(this.getY() - this.getSpeed());
         }
 
         if (isFiring) {
-            Game.bulletsList.add(new Bullet(this.getX() + 15, this.getY(), ImageAlbum.Bullet.getPath()));
+            GameState.bulletsList.add(new Bullet(this.getX()+16, this.getY()));
+            isFiring =false;
         }
 
 
     }
 
+    public void setNumberOfLives(int numberOfLives) {
+        this.numberOfLives = numberOfLives;
+    }
+
     public void render(Graphics g) {
 
-        g.drawImage(this.getPlayerIcon(), this.getX(), this.getY(), null);
+        g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
+
     }
 
     public int getScore() {
@@ -78,6 +91,6 @@ public class Player extends GameObject implements Firable {
     @Override
     public Bullet fire() {
         //TODO: fix the coordinates of the bullet starting position
-        return new Bullet(this.getX(), this.getY(), ImageAlbum.Bullet.getPath());
+        return new Bullet(this.getX(), this.getY());
     }
 }

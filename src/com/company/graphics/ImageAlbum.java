@@ -7,7 +7,10 @@ public enum ImageAlbum {
     SturdyEnemy("/StarDestroyer65.png"),
     DoubleDamageBonus(""),
     Bullet("/bullet.png"),
-    Background("/bg.jpg");
+    Background("/bg.jpg"),
+    Live("/live.png"),
+    Gameover("/gameover.jpg"),
+    HighScores("/highScores.png");
 
 
 
