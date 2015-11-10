@@ -12,5 +12,9 @@ public class DoubleDamageBonus extends Bonus {
     public DoubleDamageBonus(int x, int y) {
         super(x, y, Assets.doubleDamageBonus, DAMAGE_MULTIPLIER, SPEED_MULTIPLIER);
     }
+    @Override
+    public void update(){
+
+    }
 
 }

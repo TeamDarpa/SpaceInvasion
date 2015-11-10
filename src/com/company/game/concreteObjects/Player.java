@@ -63,12 +63,6 @@ public class Player extends GameObject implements Firable {
     public void setNumberOfLives(int numberOfLives) {
         this.numberOfLives = numberOfLives;
     }
-    @Override
-    public void display(Graphics g) {
-
-        g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
-
-    }
 
     public int getScore() {
         return this.score;

@@ -16,4 +16,5 @@ public abstract class Bonus extends GameObject {
         return this.multiplierForDamage;
     }
 
+
 }

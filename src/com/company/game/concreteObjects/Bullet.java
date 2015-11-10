@@ -33,9 +33,6 @@ public class Bullet extends GameObject {
             GameState.bulletsList.remove(this);
         }
     }
-    @Override
-    public void display(Graphics g) {
-        g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
-    }
+
 
 }
