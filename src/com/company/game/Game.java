@@ -31,13 +31,13 @@ public class Game implements Runnable {
 
 
     private void init() {
-        this.display = new Display("Star wars", 800, 600);
+        this.display = new Display("Space Invasion", 800, 600);
         this.keyboardInput = new KeyboardInput(this,this.display);
         gameState = new GameState();
         menuState = new MainMenuState();
         gameOverState = new GameOverState();
         highScoreState = new HighScoresState();
-        StateManager.setCurrentState(gameState);
+        StateManager.setCurrentState(menuState);
     }
 
     public void displayFrame() {
