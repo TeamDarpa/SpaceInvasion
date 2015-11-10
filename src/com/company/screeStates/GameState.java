@@ -40,6 +40,7 @@ public class GameState extends State implements Displayable{
         player.update();
         if(Enemy.passed >= 3){          //if player misses three enemies loses one live
             player.setNumberOfLives(player.getNumberOfLives()-1);
+            Enemy.passed = 0;
         }
         for (int i = 0; i < bulletsList.size(); i++) {
             bulletsList.get(i).update();
