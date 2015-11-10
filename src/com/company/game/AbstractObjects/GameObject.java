@@ -1,6 +1,7 @@
 package com.company.game.AbstractObjects;
 
 import com.company.gameObjectsInterfaces.Displayable;
+import com.company.gameObjectsInterfaces.Updateable;
 import com.company.graphics.ImageLoader;
 
 import java.awt.*;
@@ -9,7 +10,7 @@ import java.awt.image.BufferedImage;
 //Note: If you extend the class and want to push the path from the child
 //      you must add it's path to the ImageAlbum and take it from there in the concrete child class.
 
-public class GameObject implements Displayable {
+public abstract class GameObject implements Displayable, Updateable {
 
     //TODO: implement the basic fields of all obects in the game
     private int x;
@@ -65,10 +66,5 @@ public class GameObject implements Displayable {
         }
 
         return false;
-    }
-
-    @Override
-    public void display(Graphics g) {
-
     }
 }

@@ -23,6 +23,7 @@ public class Bullet extends GameObject {
         return this.bulletStrenght;
     }
 
+    @Override
     public void update() {
         this.getColliderBox().setBounds(this.getX(), this.getY(),
                 this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());

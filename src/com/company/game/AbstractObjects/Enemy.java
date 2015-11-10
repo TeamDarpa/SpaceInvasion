@@ -26,6 +26,7 @@ public abstract class Enemy extends GameObject {
         return this.pointsForPlayer;
     }
 
+    @Override
     public void update() {
         this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
 

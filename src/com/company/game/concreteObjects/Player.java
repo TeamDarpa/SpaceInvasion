@@ -34,6 +34,7 @@ public class Player extends GameObject implements Firable {
         this.score = 0;
     }
 
+    @Override
     public void update() {
 
         this.getColliderBox().setBounds(this.getX(), this.getY(),
@@ -87,7 +88,6 @@ public class Player extends GameObject implements Firable {
 
     @Override
     public Bullet fire() {
-        //TODO: fix the coordinates of the bullet starting position
         return new Bullet(this.getX(), this.getY());
     }
 
