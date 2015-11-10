@@ -1,6 +1,5 @@
 package com.company.game.AbstractObjects;
 
-
 import com.company.graphics.Assets;
 import com.company.screeStates.GameState;
 
@@ -12,6 +11,7 @@ public abstract class Enemy extends GameObject {
     private int health;
     private int pointsForPlayer;
     public static int passed = 0;
+
     public Enemy(int x, int y, int health, BufferedImage gameObjectIcon, int pointsForPlayer, int speedMultiplier) {
         super(x, y, gameObjectIcon, speedMultiplier);
         this.health = health;
@@ -27,7 +27,8 @@ public abstract class Enemy extends GameObject {
     }
 
     public void update() {
-        this.getColliderBox().setBounds(this.getX(),this.getY(),this.getObjectIcon().getWidth(),this.getObjectIcon().getHeight());
+        this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
+
         if (this.getHealth()>0) {
             this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
             this.setY(this.getY() + this.getSpeed());
@@ -37,6 +38,7 @@ public abstract class Enemy extends GameObject {
                 GameState.enemiesList.remove(this);
                 passed++;
             }
+
             for (int i = 0; i < GameState.bulletsList.size(); i++) {
                 if(this.collide(GameState.bulletsList.get(i).getColliderBox())) {
                     GameState.bulletsList.remove(i);
@@ -45,12 +47,15 @@ public abstract class Enemy extends GameObject {
             }
 
         }
+
         if(this.getHealth()==0) {
             GameState.enemiesList.remove(this);
             GameState.score+=this.getPointsForPlayer();
         }
     }
+
     public void render(Graphics g) {
-        g.drawImage(this.getObjectIcon(),this.getX(),this.getY(),null);
+        g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
     }
+
 }

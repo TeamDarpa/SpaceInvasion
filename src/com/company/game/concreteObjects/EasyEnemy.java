@@ -8,7 +8,6 @@ import com.company.screeStates.GameState;
 
 import java.awt.*;
 
-
 public class EasyEnemy extends Enemy {
 
     private static final int HEALTH = 1;
@@ -18,6 +17,5 @@ public class EasyEnemy extends Enemy {
     public EasyEnemy(int x, int y) {
         super(x, y, HEALTH, Assets.easyEnemy, POINTS_FOR_PLAYER, SPEED_MULTIPLIER);
     }
-
 
 }

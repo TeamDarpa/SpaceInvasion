@@ -12,7 +12,6 @@ import com.company.screeStates.GameState;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-
 public class Player extends GameObject implements Firable {
 
     private final int INITILAL_NUMBER_OF_LIVES = 3;
@@ -35,12 +34,13 @@ public class Player extends GameObject implements Firable {
         this.numberOfLives = INITILAL_NUMBER_OF_LIVES;
         this.playerName = name;
         this.score = 0;
-
     }
 
     public void update() {
 
-        this.getColliderBox().setBounds(this.getX(),this.getY(),this.getObjectIcon().getWidth(),this.getObjectIcon().getHeight());
+        this.getColliderBox().setBounds(this.getX(), this.getY(),
+                this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
+
         if (isMovingRight && this.getX() + this.getSpeed() <= 730) {
             this.setX(this.getX() + this.getSpeed());
         }
@@ -55,10 +55,9 @@ public class Player extends GameObject implements Firable {
         }
 
         if (isFiring) {
-            GameState.bulletsList.add(new Bullet(this.getX()+16, this.getY()));
+            GameState.bulletsList.add(new Bullet(this.getX() + 16, this.getY()));
             isFiring =false;
         }
-
 
     }
 
@@ -93,4 +92,5 @@ public class Player extends GameObject implements Firable {
         //TODO: fix the coordinates of the bullet starting position
         return new Bullet(this.getX(), this.getY());
     }
+
 }

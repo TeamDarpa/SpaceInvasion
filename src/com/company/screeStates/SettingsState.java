@@ -2,8 +2,8 @@ package com.company.screeStates;
 
 import java.awt.*;
 
-
 public class SettingsState extends State{
+
     @Override
     public void update() {
 

@@ -1,6 +1,5 @@
 package com.company.game;
 
-
 import com.company.display.Display;
 import com.company.game.concreteObjects.KeyboardInput;
 import com.company.game.concreteObjects.MouseInput;
@@ -9,10 +8,6 @@ import com.company.screeStates.*;
 import java.awt.*;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
-
-
-
-
 
 public class Game implements Runnable {
 
@@ -32,8 +27,6 @@ public class Game implements Runnable {
     private State gameOverState;
     private State highScoreState;
 
-
-
     private void init() {
         this.display = new Display("Space Invasion", 800, 600);
         this.keyboardInput = new KeyboardInput(this,this.display);
@@ -52,8 +45,10 @@ public class Game implements Runnable {
 
         if (bs == null) {
             this.display.getCanvas().createBufferStrategy(2);
+
             return;
         }
+
         this.g = bs.getDrawGraphics();
         /////////DRAW HERE /////////////////
 
@@ -62,6 +57,7 @@ public class Game implements Runnable {
         if(StateManager.getCurrentState()!=null) {
             StateManager.getCurrentState().display(g);
         }
+
         ////////////// TO HERE////////////
         g.dispose();
         bs.show();
@@ -71,24 +67,25 @@ public class Game implements Runnable {
         if(StateManager.getCurrentState()!=null) {
             StateManager.getCurrentState().update();
         }
-
     }
 
     public synchronized void start() {
         if (isRuning) {
             return;
         }
+
         isRuning = true;
         thread = new Thread(this);
         thread.start();
-
     }
 
     public synchronized void stop() {
         if (!isRuning) {
             return;
         }
+
         isRuning = false;
+
         try {
             thread.join();
         } catch (InterruptedException e) {
@@ -113,6 +110,7 @@ public class Game implements Runnable {
             delta += (now-lastTime) / timePerTick;
             timer += now - lastTime;
             lastTime = now;
+
             if (delta >= 1) {
                 this.update();
                 this.displayFrame();
@@ -125,8 +123,8 @@ public class Game implements Runnable {
                 timer = 0;
             }
         }
+
         stop();
     }
-
 
 }

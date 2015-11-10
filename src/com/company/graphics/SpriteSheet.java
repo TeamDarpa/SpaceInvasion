@@ -3,6 +3,7 @@ package com.company.graphics;
 import java.awt.image.BufferedImage;
 
 public class SpriteSheet {
+
     private BufferedImage sheet;
     private int cropWidth;
     private int cropHeight;
@@ -18,4 +19,5 @@ public class SpriteSheet {
         //Returns a new image in the area we specified
         return sheet.getSubimage(x * this.cropWidth, y * this.cropHeight, this.cropWidth, this.cropHeight);
     }
+
 }

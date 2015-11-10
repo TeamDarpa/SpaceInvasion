@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage;
 //      you must add it's path to the ImageAlbum and take it from there in the concrete child class.
 
 public class GameObject {
+
     //TODO: implement the basic fields of all obects in the game
     private int x;
     private int y;
@@ -21,8 +22,8 @@ public class GameObject {
         this.y = y;
         this.speed = speedMultiplier;
         this.gameObjectIcon = gameObjectIcon;
-        this.colliderBox = new Rectangle(this.x,this.y,this.gameObjectIcon.getWidth(), this.gameObjectIcon.getHeight());
-
+        this.colliderBox = new Rectangle(this.x, this.y,
+                this.gameObjectIcon.getWidth(), this.gameObjectIcon.getHeight());
     }
 
     public int getX() {
@@ -58,7 +59,11 @@ public class GameObject {
     }
 
     public boolean collide(Rectangle r) {
-        if (this.colliderBox.intersects(r)) return true;
+        if (this.colliderBox.intersects(r)) {
+            return true;
+        }
+
         return false;
     }
+
 }

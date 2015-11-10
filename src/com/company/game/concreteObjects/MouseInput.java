@@ -8,20 +8,15 @@ import com.company.screeStates.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-
 public class MouseInput implements MouseListener {
     public MouseInput(Display display) {
         display.getCanvas().addMouseListener(this);
     }
 
-
-
-
     @Override
     public void mouseClicked(MouseEvent e) {
 
     }
-
 
     public void mousePressed(MouseEvent e) {
         int mouseX = e.getX();
@@ -51,11 +46,33 @@ public class MouseInput implements MouseListener {
             if (mouseX >= 350 && mouseX <= 450) {
                 if (mouseY >= 350 && mouseY <= 400) {
                     StateManager.setCurrentState(new QuitState());
+
+                    // TODO: Saving to file
+
+                    System.exit(0);
                 }
             }
         }
 
+        // HighScores
+        if(StateManager.getCurrentState() instanceof HighScoresState) {
+            // Back Button
+            if (mouseX >= 340 && mouseX <= 440) {
+                if (mouseY >= 470 && mouseY <= 520) {
+                    StateManager.setCurrentState(new MainMenuState());
+                }
+            }
+        }
 
+        // Quit
+        if(StateManager.getCurrentState() instanceof GameOverState) {
+            // Back Button
+            if (mouseX >= 340 && mouseX <= 440) {
+                if (mouseY >= 470 && mouseY <= 520) {
+                    StateManager.setCurrentState(new MainMenuState());
+                }
+            }
+        }
     }
 
     @Override
@@ -72,4 +89,5 @@ public class MouseInput implements MouseListener {
     public void mouseExited(MouseEvent e) {
 
     }
+
 }

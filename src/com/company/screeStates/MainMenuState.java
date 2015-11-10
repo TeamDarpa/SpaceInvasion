@@ -6,6 +6,7 @@ import com.company.graphics.Assets;
 import java.awt.*;
 
 public class MainMenuState extends State {
+
     //TODO: Display the menu with options and listen for the event clicked
     private int currentSelection;
 
@@ -25,7 +26,6 @@ public class MainMenuState extends State {
         g.drawImage(Assets.background, 0, 0, null);
         Graphics2D g2d = (Graphics2D) g;
 
-
         Font titleFont = new Font("redensek", Font.BOLD, 50);
         g.setFont(titleFont);
         g.setColor(Color.white);
@@ -39,9 +39,6 @@ public class MainMenuState extends State {
         g2d.draw(highScoreButton);
         g.drawString("Quit", quitButton.x + 20, quitButton.y + 35);
         g2d.draw(quitButton);
-
-
     }
-
 
 }

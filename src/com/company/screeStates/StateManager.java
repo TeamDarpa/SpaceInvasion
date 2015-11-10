@@ -1,6 +1,7 @@
 package com.company.screeStates;
 
 public class StateManager {
+
     private static State currentState;
 
     public static State getCurrentState() {
@@ -10,5 +11,6 @@ public class StateManager {
     public static void setCurrentState(State newState) {
         currentState = newState;
     }
+
 }
 

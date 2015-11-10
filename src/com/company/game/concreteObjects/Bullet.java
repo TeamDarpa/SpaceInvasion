@@ -6,6 +6,7 @@ import com.company.graphics.Assets;
 import com.company.screeStates.GameState;
 
 import java.awt.*;
+
 public class Bullet extends GameObject {
 
     private int bulletStrenght;
@@ -23,8 +24,10 @@ public class Bullet extends GameObject {
     }
 
     public void update() {
-        this.getColliderBox().setBounds(this.getX(),this.getY(),this.getObjectIcon().getWidth(),this.getObjectIcon().getHeight());
+        this.getColliderBox().setBounds(this.getX(), this.getY(),
+                this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
         this.setY(this.getY() - this.getSpeed() * speedMultiplier);
+
         if (this.getY() == 0) {
             GameState.bulletsList.remove(this);
         }
@@ -33,4 +36,5 @@ public class Bullet extends GameObject {
     public void render(Graphics g) {
         g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
     }
+
 }

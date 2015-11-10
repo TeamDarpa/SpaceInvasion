@@ -1,10 +1,10 @@
 package com.company.game.AbstractObjects;
 
-
 import com.company.graphics.Assets;
 import java.awt.image.BufferedImage;
 
 public abstract class Bonus extends GameObject {
+
     private int multiplierForDamage;
 
     public Bonus(int x, int y, BufferedImage gameObjectIcon, int damageMultiplier, int speedMultiplier) {
@@ -15,4 +15,5 @@ public abstract class Bonus extends GameObject {
     public int getMultiplierForDamage() {
         return this.multiplierForDamage;
     }
+
 }

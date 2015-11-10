@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
  * Created by AAAA on 9.11.2015 г..
  */
 public class Assets {
+
     public static BufferedImage background;
     public static BufferedImage player;
     public static BufferedImage bullet;
@@ -40,6 +41,7 @@ public class Assets {
         highScoresBackground = ImageLoader.loadImage(ImageAlbum.HighScores.getPath());
         gameover = ImageLoader.loadImage(ImageAlbum.Gameover.getPath());
         explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()),100,100);
+
         try {
             GraphicsEnvironment ge =
                     GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -48,8 +50,6 @@ public class Assets {
             //Handle exception
         }
 
-
-
         scores = new TreeMap<>();
         highScores = new LinkedHashMap<>();
         List<Map.Entry<String,Integer>> list;
@@ -57,6 +57,7 @@ public class Assets {
         try (BufferedReader fileReader = new BufferedReader(new FileReader("res\\highScores.txt"))) {
             String line = fileReader.readLine();
             String[] tokens;
+
             while (line != null) {
                 tokens = line.split(" ");
                 scores.put(tokens[0],Integer.parseInt(tokens[1]));
@@ -66,12 +67,19 @@ public class Assets {
         } catch (IOException ioex) {
             System.err.println("Cannot read the file");
         }
+
         list = new ArrayList<>(scores.entrySet());
         Collections.sort(list,(a,b) -> b.getValue().compareTo(a.getValue()));
-        if(list.size()>10) list.subList(0,10);
+
+        if(list.size() > 10) {
+            list.subList(0,10);
+        }
+
         for (Map.Entry<String, Integer> entry : list) {
             highScores.put(entry.getKey(),entry.getValue());
         }
+
         lowestScore = list.get(list.size()-1).getValue();
     }
+
 }

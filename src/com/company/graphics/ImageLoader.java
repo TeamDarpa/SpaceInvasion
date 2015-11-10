@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.URL;
 
 public class ImageLoader {
+
     //TODO: Implement loading images from path and returnig them to the caller
     public static BufferedImage loadImage(String path) {
         try {
@@ -16,6 +17,8 @@ public class ImageLoader {
             e.printStackTrace();
             System.exit(1);
         }
+
         return null;
     }
+
 }
