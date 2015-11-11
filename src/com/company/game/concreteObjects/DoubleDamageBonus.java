@@ -2,7 +2,6 @@ package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.Bonus;
 import com.company.graphics.Assets;
-import com.company.graphics.ImageAlbum;
 
 public class DoubleDamageBonus extends Bonus {
 

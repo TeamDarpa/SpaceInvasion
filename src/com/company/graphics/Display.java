@@ -1,4 +1,4 @@
-package com.company.display;
+package com.company.graphics;
 
 import com.company.game.AbstractObjects.GameObject;
 

@@ -1,8 +1,6 @@
-package com.company.game.concreteObjects;
+package com.company.eventHandlers;
 
-import com.company.Main;
-import com.company.display.Display;
-import com.company.game.Game;
+import com.company.graphics.Display;
 import com.company.screeStates.*;
 
 import java.awt.event.MouseEvent;

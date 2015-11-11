@@ -2,10 +2,6 @@ package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.Enemy;
 import com.company.graphics.Assets;
-import com.company.graphics.ImageAlbum;
-import com.company.screeStates.GameState;
-
-import java.awt.*;
 
 public class SturdyEnemy extends Enemy {
 

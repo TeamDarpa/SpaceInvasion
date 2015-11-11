@@ -1,6 +1,5 @@
 package com.company.screeStates;
 
-import com.company.game.concreteObjects.MouseInput;
 import com.company.graphics.Assets;
 
 import java.awt.*;

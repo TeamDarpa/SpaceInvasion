@@ -1,13 +1,10 @@
 package com.company.game.AbstractObjects;
 
 import com.company.game.concreteObjects.DoubleDamageBonus;
-import com.company.graphics.Assets;
 import com.company.helperClasses.RandomGenerator;
 import com.company.screeStates.GameState;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.Random;
 
 public abstract class Enemy extends GameObject {
 

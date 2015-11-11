@@ -1,12 +1,11 @@
 package com.company.game;
 
-import com.company.display.Display;
-import com.company.game.concreteObjects.KeyboardInput;
-import com.company.game.concreteObjects.MouseInput;
+import com.company.graphics.Display;
+import com.company.eventHandlers.KeyboardInput;
+import com.company.eventHandlers.MouseInput;
 import com.company.screeStates.*;
 
 import java.awt.*;
-import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 
 public class Game implements Runnable {

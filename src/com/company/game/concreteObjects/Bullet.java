@@ -1,11 +1,8 @@
 package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.GameObject;
-import com.company.game.Game;
 import com.company.graphics.Assets;
 import com.company.screeStates.GameState;
-
-import java.awt.*;
 
 public class Bullet extends GameObject {
 
