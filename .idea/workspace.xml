@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="644612fb-9d8f-4563-ab3d-7f1cec25b3c3" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\SoftUni\FundamentalLevel\JavaFundamentals\Teamwork\SpaceInvasion\out\production\Java-Teamwork\com\company\display\Display.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\SoftUni\FundamentalLevel\JavaFundamentals\Teamwork\SpaceInvasion\out\production\Java-Teamwork\com\company\game\concreteObjects\KeyboardInput.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\SoftUni\FundamentalLevel\JavaFundamentals\Teamwork\SpaceInvasion\out\production\Java-Teamwork\com\company\game\concreteObjects\MouseInput.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/Assets.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/Assets.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/Bullet.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/Bullet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/DoubleDamageBonus.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/DoubleDamageBonus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/EasyEnemy.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/EasyEnemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/AbstractObjects/Enemy.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/AbstractObjects/Enemy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/Game.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/ImageAlbum.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/graphics/ImageAlbum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/screeStates/MainMenuState.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/screeStates/MainMenuState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/SturdyEnemy.class" afterPath="$PROJECT_DIR$/out/production/Java-Teamwork/com/company/game/concreteObjects/SturdyEnemy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/XWing65.png" afterPath="$PROJECT_DIR$/res/XWing65.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/graphics/Assets.java" afterPath="$PROJECT_DIR$/src/com/company/graphics/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/game/Game.java" afterPath="$PROJECT_DIR$/src/com/company/game/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" afterPath="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/eventHandlers/MouseInput.java" afterPath="$PROJECT_DIR$/src/com/company/eventHandlers/MouseInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\SoftUni\FundamentalLevel\JavaFundamentals\Teamwork\SpaceInvasion\res\JediStarfighter65.png" afterPath="$PROJECT_DIR$/res/JediStarFighter65.png" />
     </list>
     <ignored path="Java-Teamwork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MouseInput.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MouseInput.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/eventHandlers/MouseInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3866231">
-              <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -106,17 +94,27 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/graphics/Assets.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
+              <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageAlbum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java">
+      <file leaf-file-name="KeyboardInput.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/eventHandlers/KeyboardInput.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageAlbum.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24959217">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -186,10 +184,10 @@
         <option value="$PROJECT_DIR$/src/com/company/concreteObjects/EasyEnemy.java" />
         <option value="$PROJECT_DIR$/src/com/company/game/concreteObjects/EasyEnemy.java" />
         <option value="$PROJECT_DIR$/src/com/company/screeStates/ChooseSideState.java" />
-        <option value="$PROJECT_DIR$/src/com/company/graphics/Assets.java" />
-        <option value="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" />
         <option value="$PROJECT_DIR$/src/com/company/game/Game.java" />
         <option value="$PROJECT_DIR$/src/com/company/eventHandlers/MouseInput.java" />
+        <option value="$PROJECT_DIR$/src/com/company/graphics/Assets.java" />
+        <option value="$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java" />
       </list>
     </option>
   </component>
@@ -907,6 +905,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -915,16 +914,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/eventHandlers/KeyboardInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,14 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1034,18 +1017,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/Assets.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/eventHandlers/MouseInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="60" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/eventHandlers/MouseInput.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/eventHandlers/KeyboardInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3866231">
-          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/Assets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/graphics/ImageAlbum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24959217">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding />
         </state>
       </provider>

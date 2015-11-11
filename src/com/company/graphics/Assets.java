@@ -1,5 +1,7 @@
 package com.company.graphics;
 
+import com.company.eventHandlers.MouseInput;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
@@ -33,10 +35,23 @@ public class Assets {
 
     public static void init() {
         background = ImageLoader.loadImage(ImageAlbum.Background.getPath());
-        player = ImageLoader.loadImage(ImageAlbum.RebelPlayer.getPath());
+
+        if (MouseInput.isRebel) {
+            player = ImageLoader.loadImage(ImageAlbum.RebelPlayer.getPath());
+            easyEnemy = ImageLoader.loadImage(ImageAlbum.EasyEmpireEnemy.getPath());
+            sturdyEnemy = ImageLoader.loadImage(ImageAlbum.SturdyEmpireEnemy.getPath());
+
+        } else {
+            player = ImageLoader.loadImage(ImageAlbum.SithPlayer.getPath());
+            easyEnemy = ImageLoader.loadImage(ImageAlbum.EasyRebelsEnemy.getPath());
+            sturdyEnemy = ImageLoader.loadImage(ImageAlbum.SturdyRebelsEnemy.getPath());
+        }
+
         bullet = ImageLoader.loadImage(ImageAlbum.Bullet.getPath());
-        easyEnemy = ImageLoader.loadImage(ImageAlbum.EasyEnemy.getPath());
-        sturdyEnemy = ImageLoader.loadImage(ImageAlbum.SturdyEnemy.getPath());
+
+
+
+
         live = ImageLoader.loadImage(ImageAlbum.Live.getPath());
         doubleDamageBonus = ImageLoader.loadImage(ImageAlbum.DoubleDamageBonus.getPath());
         highScoresBackground = ImageLoader.loadImage(ImageAlbum.HighScores.getPath());

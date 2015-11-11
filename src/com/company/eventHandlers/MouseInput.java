@@ -1,12 +1,16 @@
 package com.company.eventHandlers;
 
+import com.company.graphics.Assets;
 import com.company.graphics.Display;
+import com.company.graphics.ImageAlbum;
+import com.company.graphics.ImageLoader;
 import com.company.screeStates.*;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MouseInput implements MouseListener {
+    public static boolean isRebel;
     public MouseInput(Display display) {
         display.getCanvas().addMouseListener(this);
     }
@@ -47,9 +51,11 @@ public class MouseInput implements MouseListener {
             }
         }
         else if(StateManager.getCurrentState() instanceof ChooseSideState) {
+
             //Sith Button
             if (mouseX >= 50 && mouseX <= 350) {
                 if (mouseY >= 300 && mouseY <= 400) {
+                    isRebel = false;
                     StateManager.setCurrentState(new GameState());
                 }
             }
@@ -57,6 +63,7 @@ public class MouseInput implements MouseListener {
             //Rebels Button
             if (mouseX >= 450 && mouseX <= 750) {
                 if (mouseY >= 300 && mouseY <= 400) {
+                    isRebel = true;
                     StateManager.setCurrentState(new GameState());
                 }
             }

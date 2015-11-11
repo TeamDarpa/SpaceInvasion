@@ -5,8 +5,10 @@ public enum ImageAlbum {
     //If you add another object to the game you must insert it in the enumeration here in order to get it's path
     RebelPlayer("/MilleniumFalcon65.png"),
     SithPlayer("/SithInfiltrator65.png"),
-    EasyEnemy("/TIEFighter65.png"),
-    SturdyEnemy("/StarDestroyer65.png"),
+    EasyEmpireEnemy("/TIEFighter65.png"),
+    SturdyEmpireEnemy("/StarDestroyer65.png"),
+    EasyRebelsEnemy("/XWing65.png"),
+    SturdyRebelsEnemy("/JediStarFighter65.png"),
     DoubleDamageBonus("/x2Bonus.png"),
     Bullet("/bullet.png"),
     Background("/bg.jpg"),
