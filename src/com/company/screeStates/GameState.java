@@ -115,6 +115,9 @@ public class GameState extends State implements Displayable {
     public void display(Graphics g) {
 
         g.drawImage(Assets.background, 0, 0, null);
+        if(player.getCurrentBonus() != null){
+            g.drawImage(player.getCurrentBonus().getObjectIcon(), 730, 530, null);
+        }
         player.display(g);
 
         for(int i = 0; i < bonusList.size(); i++){
