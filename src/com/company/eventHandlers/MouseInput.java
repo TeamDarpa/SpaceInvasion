@@ -55,6 +55,7 @@ public class MouseInput implements MouseListener {
             //Sith Button
             if (mouseX >= 50 && mouseX <= 350) {
                 if (mouseY >= 300 && mouseY <= 400) {
+                    PlayMusic.empire.play();
                     isRebel = false;
                     StateManager.setCurrentState(new GameState());
                 }
@@ -63,6 +64,7 @@ public class MouseInput implements MouseListener {
             //Rebels Button
             if (mouseX >= 450 && mouseX <= 750) {
                 if (mouseY >= 300 && mouseY <= 400) {
+                    PlayMusic.rebels.loop();
                     isRebel = true;
                     StateManager.setCurrentState(new GameState());
                 }
@@ -81,6 +83,8 @@ public class MouseInput implements MouseListener {
 
         // Quit
         if(StateManager.getCurrentState() instanceof GameOverState) {
+
+
             // Back Button
             if (mouseX >= 340 && mouseX <= 440) {
                 if (mouseY >= 470 && mouseY <= 520) {

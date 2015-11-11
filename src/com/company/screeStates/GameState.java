@@ -1,5 +1,7 @@
 package com.company.screeStates;
 
+import com.company.eventHandlers.MouseInput;
+import com.company.eventHandlers.PlayMusic;
 import com.company.game.AbstractObjects.Bonus;
 import com.company.game.AbstractObjects.Enemy;
 import com.company.game.concreteObjects.Bullet;
@@ -70,6 +72,7 @@ public class GameState extends State implements Displayable {
             if(player.collide(enemiesList.get(i).getColliderBox())) {
                 player.setNumberOfLives(player.getNumberOfLives() - 1);
                 explode = true;
+                PlayMusic.boom.play();
                 enemiesList.get(i).setColliderBox(new Rectangle(0, 0, 1, 1));
 
                 break;
@@ -90,6 +93,11 @@ public class GameState extends State implements Displayable {
 
         // Player Ends Playing
         if(player.getNumberOfLives() == 0) {
+            if (MouseInput.isRebel) {
+                PlayMusic.rebels.stop();
+            } else {
+                PlayMusic.empire.stop();
+            }
             StateManager.setCurrentState(new GameOverState());
         }
 
