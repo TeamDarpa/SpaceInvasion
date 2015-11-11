@@ -62,6 +62,9 @@ public class GameState extends State implements Displayable {
             bulletsList.get(i).update();
         }
 
+        for (int i = 0; i < bonusList.size(); i++) {
+            bonusList.get(i).update();
+        }
         for (int i = 0; i < enemiesList.size(); i++) {
 
             if(player.collide(enemiesList.get(i).getColliderBox())) {
@@ -71,7 +74,6 @@ public class GameState extends State implements Displayable {
 
                 break;
             }
-
             if(!explode) {
                 enemiesList.get(i).update();
             }

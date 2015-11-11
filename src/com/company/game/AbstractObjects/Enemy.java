@@ -21,11 +21,11 @@ public abstract class Enemy extends GameObject {
         this.pointsForPlayer = pointsForPlayer;
     }
 
-    public int getHealth(){
+    public int getHealth() {
         return this.health;
     }
 
-    public int getPointsForPlayer(){
+    public int getPointsForPlayer() {
         return this.pointsForPlayer;
     }
 
@@ -33,7 +33,7 @@ public abstract class Enemy extends GameObject {
     public void update() {
         this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
 
-        if (this.getHealth()>0) {
+        if (this.getHealth() > 0) {
             this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
             this.setY(this.getY() + this.getSpeed());
 
@@ -44,21 +44,35 @@ public abstract class Enemy extends GameObject {
             }
 
             for (int i = 0; i < GameState.bulletsList.size(); i++) {
-                if(this.collide(GameState.bulletsList.get(i).getColliderBox())) {
+                if (this.collide(GameState.bulletsList.get(i).getColliderBox())) {
+                    this.health -= GameState.bulletsList.get(i).getBulletStrenght();
+
+                    if (this.health < 0) {
+                        this.health = 0;
+                        if (GameState.player != null) {
+                            this.pointsForPlayer *= GameState.player.getCurrentBonus().getMultiploerForScore();
+                        }
+                    }
                     GameState.bulletsList.remove(i);
-                    this.health--;
                 }
             }
 
         }
 
-        if(this.getHealth()==0) {
+        if (this.getHealth() == 0) {
+
             GameState.enemiesList.remove(this);
             double chanceToGenerateBonus = RandomGenerator.getNextRandom();
-            if (chanceToGenerateBonus > 0.7){
+            if (chanceToGenerateBonus > 0.7) {
                 GameState.bonusList.add(new DoubleDamageBonus(this.getX(), this.getY()));
             }
-            GameState.score+=this.getPointsForPlayer();
+
+
+            if (GameState.player.getCurrentBonus() != null) {
+                GameState.score += this.getPointsForPlayer() * GameState.player.getCurrentBonus().getMultiploerForScore();
+            } else {
+                GameState.score += this.getPointsForPlayer();
+            }
         }
     }
 }

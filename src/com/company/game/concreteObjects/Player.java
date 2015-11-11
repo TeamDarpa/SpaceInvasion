@@ -2,23 +2,17 @@ package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.Bonus;
 import com.company.game.AbstractObjects.GameObject;
-import com.company.game.Game;
-import com.company.gameObjectsInterfaces.Firable;
 import com.company.graphics.Assets;
-import com.company.graphics.ImageAlbum;
-import com.company.graphics.ImageLoader;
 import com.company.screeStates.GameState;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
-
-public class Player extends GameObject implements Firable {
+public class Player extends GameObject  {
 
     private final int INITILAL_NUMBER_OF_LIVES = 3;
     private int numberOfLives;
     private String playerName;
     private int score;
     private Bonus currentBonus;
+    private int timeForBonus;
 
     public static boolean
             isMovingLeft = false,
@@ -36,7 +30,16 @@ public class Player extends GameObject implements Firable {
 
     @Override
     public void update() {
-
+        if(this.timeForBonus > 0){
+            this.timeForBonus--;
+        }
+        else if(this.currentBonus != null && this.timeForBonus == 0){
+            this.currentBonus = null;
+        }
+        else {
+            this.currentBonus = null;
+            this.timeForBonus = 0;
+        }
         this.getColliderBox().setBounds(this.getX(), this.getY(),
                 this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
 
@@ -54,8 +57,14 @@ public class Player extends GameObject implements Firable {
         }
 
         if (isFiring) {
-            GameState.bulletsList.add(new Bullet(this.getX() + 16, this.getY()));
+            if(this.currentBonus != null){
+                GameState.bulletsList.add(new Bullet(this.getX() + 16, this.getY(), currentBonus.getMultiplierForDamage()));
+            }
+            else{
+                GameState.bulletsList.add(new Bullet(this.getX() + 16, this.getY(), 1));
+            }
             isFiring =false;
+
         }
 
     }
@@ -80,9 +89,15 @@ public class Player extends GameObject implements Firable {
         this.score += points;
     }
 
-    @Override
-    public Bullet fire() {
-        return new Bullet(this.getX(), this.getY());
+    public void setCurrentBonus(Bonus bonus){
+        this.timeForBonus = bonus.getBonusDuration();
+        this.currentBonus = bonus;
     }
+
+    public Bonus getCurrentBonus()
+    {
+        return this.currentBonus;
+    }
+
 
 }

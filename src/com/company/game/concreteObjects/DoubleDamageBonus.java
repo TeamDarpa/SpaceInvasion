@@ -7,14 +7,10 @@ import com.company.graphics.ImageAlbum;
 public class DoubleDamageBonus extends Bonus {
 
     private static final int DAMAGE_MULTIPLIER = 2;
-    private static final int SPEED_MULTIPLIER = 1;
-
+    private static final int SPEED_MULTIPLIER = 3;
+    private static final int SCORE_MULTIPLIER = 2;
+    private static final int BONUS_DURATION = 30;
     public DoubleDamageBonus(int x, int y) {
-        super(x, y, Assets.doubleDamageBonus, DAMAGE_MULTIPLIER, SPEED_MULTIPLIER);
+        super(x, y, Assets.doubleDamageBonus, DAMAGE_MULTIPLIER, SPEED_MULTIPLIER, SCORE_MULTIPLIER, BONUS_DURATION);
     }
-    @Override
-    public void update(){
-
-    }
-
 }

@@ -71,4 +71,9 @@ public abstract class GameObject implements Displayable, Updateable {
     public void display(Graphics g) {
         g.drawImage(this.getObjectIcon(), this.getX(), this.getY(), null);
     }
+
+    @Override
+    public void update() {
+
+    }
 }
