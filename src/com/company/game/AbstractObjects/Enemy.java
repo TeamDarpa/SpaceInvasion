@@ -49,7 +49,7 @@ public abstract class Enemy extends GameObject {
 
                     if (this.health < 0) {
                         this.health = 0;
-                        if (GameState.player != null) {
+                        if (GameState.player.getCurrentBonus() != null) {
                             this.pointsForPlayer *= GameState.player.getCurrentBonus().getMultiploerForScore();
                         }
                     }
