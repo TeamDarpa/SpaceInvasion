@@ -1,12 +1,11 @@
 package com.company.screeStates;
 
+import com.company.game.concreteObjects.*;
+import com.company.game.concreteObjects.Button;
 import com.company.graphics.Assets;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.LinkedHashMap;
+
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -14,18 +13,27 @@ import java.util.TreeMap;
 public class HighScoresState extends State {
 
     public static final int ROW_HEIGHT = 35;
-    public Rectangle backButton = new Rectangle(340, 470, 100, 50);
     private int row = 0;
+    public static Button backButton = new Button(300, 470, Assets.button,"Main menu");
+    private int backButtonXPos;
+
+    public HighScoresState() {
+        Assets.loadingHighScores();
+        backButtonXPos = -220;
+        backButton.setX(backButtonXPos);
+    }
 
     @Override
     public void update() {
-
+        if(backButtonXPos < 300) {
+            backButtonXPos += 10;
+            backButton.setX(backButtonXPos);
+        }
     }
 
     @Override
     public void display(Graphics g) {
         Font blackout = new Font("redensek", Font.PLAIN, 40);
-        Graphics2D g2d = (Graphics2D) g;
         g.setFont(blackout);
         FontMetrics fontMetrics = g.getFontMetrics();
         g.setColor(Color.green);
@@ -46,11 +54,10 @@ public class HighScoresState extends State {
                 break;
             }
         }
-
-        g.drawString("Back", 350, 500);
-        g2d.draw(backButton);
-
         row = 0;
+        g.setColor(Color.GREEN);
+        g.drawImage(Assets.buttonBar,-20,backButton.getY()+35,null);
+        backButton.display(g);
     }
 
 }

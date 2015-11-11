@@ -16,7 +16,10 @@ public enum ImageAlbum {
     Gameover("/gameover.jpg"),
     HighScores("/highScores.png"),
     Explosion("/explosion.png"),
-    ChooseSideBG("/ChooseSide.jpg");
+    ChooseSideBG("/ChooseSide.jpg"),
+    MainMenu("/mainMenu.jpg"),
+    Button("/button.png"),
+    ButtonBar("/bar1.jpg");
 
     private String path;
 

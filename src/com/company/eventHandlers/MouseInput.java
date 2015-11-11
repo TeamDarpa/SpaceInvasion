@@ -26,28 +26,22 @@ public class MouseInput implements MouseListener {
 
         if(StateManager.getCurrentState() instanceof MainMenuState) {
             //Play Button
-            if (mouseX >= 350 && mouseX <= 450) {
-                if (mouseY >= 150 && mouseY <= 200) {
-                    StateManager.setCurrentState(new ChooseSideState());
-                }
+            if(MainMenuState.playButton.getColliderBox().contains(mouseX, mouseY)){
+                StateManager.setCurrentState(new ChooseSideState());
             }
 
             //High Scores Button
-            if (mouseX >= 300 && mouseX <= 500) {
-                if (mouseY >= 250 && mouseY <= 300) {
-                    StateManager.setCurrentState(new HighScoresState());
-                }
+            if (MainMenuState.highScoreButton.getColliderBox().contains(mouseX, mouseY)) {
+                StateManager.setCurrentState(new HighScoresState());
             }
 
             //Quit Button
-            if (mouseX >= 350 && mouseX <= 450) {
-                if (mouseY >= 350 && mouseY <= 400) {
-                    StateManager.setCurrentState(new QuitState());
+            if (MainMenuState.quitButton.getColliderBox().contains(mouseX, mouseY)) {
+                StateManager.setCurrentState(new QuitState());
 
-                    // TODO: Saving to file
+                // TODO: Saving to file
+                System.exit(0);
 
-                    System.exit(0);
-                }
             }
         }
         else if(StateManager.getCurrentState() instanceof ChooseSideState) {
@@ -69,29 +63,20 @@ public class MouseInput implements MouseListener {
                     StateManager.setCurrentState(new GameState());
                 }
             }
+            if(ChooseSideState.backButton.getColliderBox().contains(mouseX, mouseY)) {
+                StateManager.setCurrentState(new MainMenuState());
+            }
         }
 
         // HighScores
         if(StateManager.getCurrentState() instanceof HighScoresState) {
             // Back Button
-            if (mouseX >= 340 && mouseX <= 440) {
-                if (mouseY >= 470 && mouseY <= 520) {
-                    StateManager.setCurrentState(new MainMenuState());
-                }
+            if(HighScoresState.backButton.getColliderBox().contains(mouseX, mouseY)) {
+                StateManager.setCurrentState(new MainMenuState());
             }
         }
 
-        // Quit
-        if(StateManager.getCurrentState() instanceof GameOverState) {
 
-
-            // Back Button
-            if (mouseX >= 340 && mouseX <= 440) {
-                if (mouseY >= 470 && mouseY <= 520) {
-                    StateManager.setCurrentState(new MainMenuState());
-                }
-            }
-        }
     }
 
     @Override

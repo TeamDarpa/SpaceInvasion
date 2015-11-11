@@ -7,3 +7,5 @@ Tosho 3500
 Petar 1000
 Svetlin 12000
 Ivan 125000
+PLAMEN 0
+PETKO 20

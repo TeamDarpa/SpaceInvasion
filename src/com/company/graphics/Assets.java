@@ -1,20 +1,16 @@
 package com.company.graphics;
 
 import com.company.eventHandlers.MouseInput;
+import com.company.screeStates.GameOverState;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.awt.image.ImageConsumer;
+import java.io.*;
 import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by AAAA on 9.11.2015 г..
- */
 public class Assets {
 
     public static BufferedImage background;
@@ -28,6 +24,9 @@ public class Assets {
     public static BufferedImage gameover;
     public static BufferedImage chooseSide;
     public static SpriteSheet explosion;
+    public static BufferedImage mainMenuBackground;
+    public static BufferedImage button;
+    public static BufferedImage buttonBar;
 
     private static SortedMap<String,Integer> scores;
     public static Map<String,Integer> highScores;
@@ -58,7 +57,11 @@ public class Assets {
         gameover = ImageLoader.loadImage(ImageAlbum.Gameover.getPath());
         explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()),100,100);
         chooseSide = ImageLoader.loadImage(ImageAlbum.ChooseSideBG.getPath());
+        mainMenuBackground = ImageLoader.loadImage(ImageAlbum.MainMenu.getPath());
+        button = ImageLoader.loadImage(ImageAlbum.Button.getPath());
+        buttonBar = ImageLoader.loadImage(ImageAlbum.ButtonBar.getPath());
 
+        //Loading font
         try {
             GraphicsEnvironment ge =
                     GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -66,6 +69,11 @@ public class Assets {
         } catch (IOException |FontFormatException e) {
             //Handle exception
         }
+
+
+    }
+    public static void loadingHighScores (){
+
 
         scores = new TreeMap<>();
         highScores = new LinkedHashMap<>();
@@ -96,7 +104,18 @@ public class Assets {
             highScores.put(entry.getKey(),entry.getValue());
         }
 
-        lowestScore = list.get(list.size()-1).getValue();
+        if (list.size()>0) {
+            lowestScore = list.get(list.size()-1).getValue();
+        }
+    }
+    public static void savingHighScores(String name, int score) {
+        if (score > lowestScore || highScores.size() < 10) {
+            try (PrintWriter writer = new PrintWriter(new FileWriter("res\\highScores.txt", true))) {
+                writer.println(name + " " + score);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

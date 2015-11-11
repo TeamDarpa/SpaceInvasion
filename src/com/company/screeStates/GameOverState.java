@@ -11,7 +11,7 @@ import java.awt.event.MouseListener;
 public class GameOverState extends State implements Displayable {
 
 
-    public Rectangle backButton = new Rectangle(340, 470, 100, 50);
+    public static StringBuilder sb = new StringBuilder();
 
     @Override
     public void update() {
@@ -19,7 +19,6 @@ public class GameOverState extends State implements Displayable {
     }
 
     public void display(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
         g.setColor(Color.GREEN);
 
         g.setFont(new Font("redensek", Font.PLAIN, 100));
@@ -27,8 +26,9 @@ public class GameOverState extends State implements Displayable {
         g.drawString("GAME OVER", 190, 300);
 
         g.setFont(new Font("redensek", Font.PLAIN, 40));
-        g.drawString("Back", 350, 500);
-        g2d.draw(backButton);
+        g.drawString("Please enter your name:", 190,350);
+        g.drawRect(260,370,280,40);
+        g.drawString(sb.toString(),265,395);
     }
 
 }

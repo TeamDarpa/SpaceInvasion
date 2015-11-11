@@ -89,6 +89,10 @@ public class Player extends GameObject  {
         this.score += points;
     }
 
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
     public void setCurrentBonus(Bonus bonus){
         this.timeForBonus = bonus.getBonusDuration();
         this.currentBonus = bonus;
