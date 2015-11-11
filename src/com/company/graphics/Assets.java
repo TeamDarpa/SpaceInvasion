@@ -24,6 +24,7 @@ public class Assets {
     public static BufferedImage highScoresBackground;
     public static BufferedImage live;
     public static BufferedImage gameover;
+    public static BufferedImage chooseSide;
     public static SpriteSheet explosion;
 
     private static SortedMap<String,Integer> scores;
@@ -32,7 +33,7 @@ public class Assets {
 
     public static void init() {
         background = ImageLoader.loadImage(ImageAlbum.Background.getPath());
-        player = ImageLoader.loadImage(ImageAlbum.Player.getPath());
+        player = ImageLoader.loadImage(ImageAlbum.RebelPlayer.getPath());
         bullet = ImageLoader.loadImage(ImageAlbum.Bullet.getPath());
         easyEnemy = ImageLoader.loadImage(ImageAlbum.EasyEnemy.getPath());
         sturdyEnemy = ImageLoader.loadImage(ImageAlbum.SturdyEnemy.getPath());
@@ -41,6 +42,7 @@ public class Assets {
         highScoresBackground = ImageLoader.loadImage(ImageAlbum.HighScores.getPath());
         gameover = ImageLoader.loadImage(ImageAlbum.Gameover.getPath());
         explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()),100,100);
+        chooseSide = ImageLoader.loadImage(ImageAlbum.ChooseSideBG.getPath());
 
         try {
             GraphicsEnvironment ge =

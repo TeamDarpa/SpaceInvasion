@@ -25,6 +25,7 @@ public class Game implements Runnable {
     private State menuState;
     private State gameOverState;
     private State highScoreState;
+    private State chooseSideState;
 
     private void init() {
         this.display = new Display("Space Invasion", 800, 600);
@@ -35,6 +36,8 @@ public class Game implements Runnable {
         menuState = new MainMenuState();
         gameOverState = new GameOverState();
         highScoreState = new HighScoresState();
+        chooseSideState = new ChooseSideState();
+
         StateManager.setCurrentState(menuState);
     }
 
