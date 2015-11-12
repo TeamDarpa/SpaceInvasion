@@ -3,10 +3,10 @@ package com.company.eventHandlers;
 import com.company.graphics.Assets;
 import com.company.graphics.Display;
 import com.company.game.Game;
-import com.company.screeStates.GameOverState;
-import com.company.screeStates.GameState;
-import com.company.screeStates.MainMenuState;
-import com.company.screeStates.StateManager;
+import com.company.screenStates.GameOverState;
+import com.company.screenStates.GameState;
+import com.company.screenStates.MainMenuState;
+import com.company.screenStates.StateManager;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -26,6 +26,7 @@ public class KeyboardInput implements KeyListener {
     }
 
     public void keyPressed(KeyEvent e) {
+
         int key = e.getKeyCode();
 
         if (key == KeyEvent.VK_RIGHT) {
@@ -45,9 +46,11 @@ public class KeyboardInput implements KeyListener {
             GameState.player.isFiring = true;
             PlayMusic.fire.play();
         }
+
     }
 
     public void keyReleased(KeyEvent e) {
+
         int key = e.getKeyCode();
 
         if (key == KeyEvent.VK_RIGHT) {
@@ -66,17 +69,18 @@ public class KeyboardInput implements KeyListener {
             GameState.player.isFiring = false;
         }
         if (StateManager.getCurrentState() instanceof GameOverState) {
-            if (key>='A' && key<='Z' && GameOverState.sb.length()<14) {
+            if (key>='A' && key<='Z' && GameOverState.sb.length() < 14) {
                 GameOverState.sb.append((char) key);
-            } else if (key == KeyEvent.VK_BACK_SPACE && GameOverState.sb.length()>0) {
-                GameOverState.sb.deleteCharAt(GameOverState.sb.length()-1);
-            } else if (key == KeyEvent.VK_ENTER && GameOverState.sb.length()>0) {
+            } else if (key == KeyEvent.VK_BACK_SPACE && GameOverState.sb.length() > 0) {
+                GameOverState.sb.deleteCharAt(GameOverState.sb.length() - 1);
+            } else if (key == KeyEvent.VK_ENTER && GameOverState.sb.length() > 0) {
                 GameState.player.setPlayerName(GameOverState.sb.toString());
                 GameOverState.sb.setLength(0);
-                Assets.savingHighScores(GameState.player.getPlayerName(),GameState.score);
+                Assets.savingHighScores(GameState.player.getPlayerName(), GameState.score);
                 StateManager.setCurrentState(new MainMenuState());
             }
         }
+
     }
 
 }

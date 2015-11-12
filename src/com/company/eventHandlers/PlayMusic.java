@@ -12,8 +12,8 @@ public class PlayMusic {
     public static PlayMusic fire = new PlayMusic("/blaster-firing.wav");
     public static PlayMusic boom = new PlayMusic("/Explosion.wav");
 
-
     public PlayMusic(String fileName) {
+
         try {
             AudioInputStream ais = AudioSystem.getAudioInputStream(PlayMusic.class.getResource(fileName));
             clip = AudioSystem.getClip();
@@ -21,9 +21,11 @@ public class PlayMusic {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public void play() {
+
         try {
             if (clip != null) {
                 new Thread() {
@@ -39,6 +41,7 @@ public class PlayMusic {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public void stop() {
@@ -47,6 +50,7 @@ public class PlayMusic {
     }
 
     public void loop() {
+
         try {
             if (clip != null) {
                 new Thread() {
@@ -62,6 +66,7 @@ public class PlayMusic {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public boolean isActive() {

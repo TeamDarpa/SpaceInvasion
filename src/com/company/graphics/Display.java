@@ -15,14 +15,17 @@ public class Display {
     private Canvas canvas;
 
     public Display(String title, int width, int height) {
+
         this.title = title;
         this.width = width;
         this.height = height;
 
         initDisplay();
+
     }
 
     private void initDisplay(){
+
         this.frame = new JFrame(this.title);
         this.frame.setSize(width, height);
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,6 +42,7 @@ public class Display {
         this.frame.add(this.canvas);
 
         this.frame.pack();
+
     }
 
     public Canvas getCanvas(){

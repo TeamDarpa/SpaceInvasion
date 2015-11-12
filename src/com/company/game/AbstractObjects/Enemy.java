@@ -2,7 +2,7 @@ package com.company.game.AbstractObjects;
 
 import com.company.game.concreteObjects.DoubleDamageBonus;
 import com.company.helperClasses.RandomGenerator;
-import com.company.screeStates.GameState;
+import com.company.screenStates.GameState;
 
 import java.awt.image.BufferedImage;
 
@@ -28,10 +28,13 @@ public abstract class Enemy extends GameObject {
 
     @Override
     public void update() {
-        this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
+
+        this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(),
+                this.getObjectIcon().getHeight());
 
         if (this.getHealth() > 0) {
-            this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
+            this.getColliderBox().setBounds(this.getX(), this.getY(), this.getObjectIcon().getWidth(),
+                    this.getObjectIcon().getHeight());
             this.setY(this.getY() + this.getSpeed());
 
             //enemy is outside the window
@@ -50,20 +53,19 @@ public abstract class Enemy extends GameObject {
                             this.pointsForPlayer *= GameState.player.getCurrentBonus().getMultiploerForScore();
                         }
                     }
+
                     GameState.bulletsList.remove(i);
                 }
             }
-
         }
 
         if (this.getHealth() == 0) {
-
             GameState.enemiesList.remove(this);
             double chanceToGenerateBonus = RandomGenerator.getNextRandom();
+
             if (chanceToGenerateBonus > 0.8) {
                 GameState.bonusList.add(new DoubleDamageBonus(this.getX(), this.getY()));
             }
-
 
             if (GameState.player.getCurrentBonus() != null) {
                 GameState.score += this.getPointsForPlayer() * GameState.player.getCurrentBonus().getMultiploerForScore();
@@ -71,5 +73,7 @@ public abstract class Enemy extends GameObject {
                 GameState.score += this.getPointsForPlayer();
             }
         }
+
     }
+
 }

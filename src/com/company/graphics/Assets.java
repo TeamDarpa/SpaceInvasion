@@ -1,15 +1,12 @@
 package com.company.graphics;
 
 import com.company.eventHandlers.MouseInput;
-import com.company.screeStates.GameOverState;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.ImageConsumer;
 import java.io.*;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Assets {
 
@@ -33,6 +30,7 @@ public class Assets {
     public static int lowestScore;
 
     public static void init() {
+
         background = ImageLoader.loadImage(ImageAlbum.Background.getPath());
 
         if (MouseInput.isRebel) {
@@ -48,14 +46,11 @@ public class Assets {
 
         bullet = ImageLoader.loadImage(ImageAlbum.Bullet.getPath());
 
-
-
-
         live = ImageLoader.loadImage(ImageAlbum.Live.getPath());
         doubleDamageBonus = ImageLoader.loadImage(ImageAlbum.DoubleDamageBonus.getPath());
         highScoresBackground = ImageLoader.loadImage(ImageAlbum.HighScores.getPath());
         gameover = ImageLoader.loadImage(ImageAlbum.Gameover.getPath());
-        explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()),100,100);
+        explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()), 100, 100);
         chooseSide = ImageLoader.loadImage(ImageAlbum.ChooseSideBG.getPath());
         mainMenuBackground = ImageLoader.loadImage(ImageAlbum.MainMenu.getPath());
         button = ImageLoader.loadImage(ImageAlbum.Button.getPath());
@@ -70,10 +65,9 @@ public class Assets {
             //Handle exception
         }
 
-
     }
-    public static void loadingHighScores (){
 
+    public static void loadingHighScores() {
 
         scores = new TreeMap<>();
         highScores = new LinkedHashMap<>();
@@ -85,7 +79,7 @@ public class Assets {
 
             while (line != null) {
                 tokens = line.split(" ");
-                scores.put(tokens[0],Integer.parseInt(tokens[1]));
+                scores.put(tokens[0], Integer.parseInt(tokens[1]));
 
                 line = fileReader.readLine();
             }
@@ -94,21 +88,24 @@ public class Assets {
         }
 
         list = new ArrayList<>(scores.entrySet());
-        Collections.sort(list,(a,b) -> b.getValue().compareTo(a.getValue()));
+        Collections.sort(list, (a, b) -> b.getValue().compareTo(a.getValue()));
 
         if(list.size() > 10) {
-            list.subList(0,10);
+            list.subList(0, 10);
         }
 
         for (Map.Entry<String, Integer> entry : list) {
-            highScores.put(entry.getKey(),entry.getValue());
+            highScores.put(entry.getKey(), entry.getValue());
         }
 
-        if (list.size()>0) {
-            lowestScore = list.get(list.size()-1).getValue();
+        if (list.size() > 0) {
+            lowestScore = list.get(list.size() - 1).getValue();
         }
+
     }
+
     public static void savingHighScores(String name, int score) {
+
         if (score > lowestScore || highScores.size() < 10) {
             try (PrintWriter writer = new PrintWriter(new FileWriter("res\\highScores.txt", true))) {
                 writer.println(name + " " + score);
@@ -116,6 +113,7 @@ public class Assets {
                 e.printStackTrace();
             }
         }
+
     }
 
 }

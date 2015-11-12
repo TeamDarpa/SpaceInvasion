@@ -1,4 +1,4 @@
-package com.company.screeStates;
+package com.company.screenStates;
 
 import java.awt.*;
 

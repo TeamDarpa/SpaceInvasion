@@ -1,6 +1,5 @@
 package com.company.helperClasses;
 
-
 import java.util.Random;
 
 public class RandomGenerator {
@@ -15,7 +14,7 @@ public class RandomGenerator {
         if (random == null){
             init();
         }
-        return random.nextDouble();
 
+        return random.nextDouble();
     }
 }

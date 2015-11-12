@@ -20,12 +20,14 @@ public abstract class GameObject implements Displayable, Updateable {
     private BufferedImage gameObjectIcon;
 
     public GameObject(int x, int y, BufferedImage gameObjectIcon, int speedMultiplier) {
+
         this.x = x;
         this.y = y;
         this.speed = speedMultiplier;
         this.gameObjectIcon = gameObjectIcon;
         this.colliderBox = new Rectangle(this.x, this.y,
                 this.gameObjectIcon.getWidth(), this.gameObjectIcon.getHeight());
+
     }
 
     public int getX() {
@@ -61,11 +63,13 @@ public abstract class GameObject implements Displayable, Updateable {
     }
 
     public boolean collide(Rectangle r) {
+
         if (this.colliderBox.intersects(r)) {
             return true;
         }
 
         return false;
+
     }
     @Override
     public void display(Graphics g) {

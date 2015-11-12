@@ -1,10 +1,7 @@
 package com.company.eventHandlers;
 
-import com.company.graphics.Assets;
 import com.company.graphics.Display;
-import com.company.graphics.ImageAlbum;
-import com.company.graphics.ImageLoader;
-import com.company.screeStates.*;
+import com.company.screenStates.*;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -21,6 +18,7 @@ public class MouseInput implements MouseListener {
     }
 
     public void mousePressed(MouseEvent e) {
+
         int mouseX = e.getX();
         int mouseY = e.getY();
 
@@ -45,7 +43,6 @@ public class MouseInput implements MouseListener {
             }
         }
         else if(StateManager.getCurrentState() instanceof ChooseSideState) {
-
             //Sith Button
             if (mouseX >= 50 && mouseX <= 350) {
                 if (mouseY >= 300 && mouseY <= 400) {
@@ -75,7 +72,6 @@ public class MouseInput implements MouseListener {
                 StateManager.setCurrentState(new MainMenuState());
             }
         }
-
 
     }
 

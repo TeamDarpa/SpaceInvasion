@@ -2,7 +2,7 @@ package com.company.game.concreteObjects;
 
 import com.company.game.AbstractObjects.GameObject;
 import com.company.graphics.Assets;
-import com.company.screeStates.GameState;
+import com.company.screenStates.GameState;
 
 public class Bullet extends GameObject {
 
@@ -10,6 +10,7 @@ public class Bullet extends GameObject {
     private static final int speedMultiplier = 5;
 
     public Bullet(int x, int y, int strenghtMultiplier) {
+
         super(x, y, Assets.bullet, speedMultiplier);
         this.bulletStrenght = 1;
         this.bulletStrenght *= strenghtMultiplier;
@@ -30,6 +31,5 @@ public class Bullet extends GameObject {
             GameState.bulletsList.remove(this);
         }
     }
-
 
 }

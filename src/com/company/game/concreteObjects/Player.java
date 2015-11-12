@@ -3,7 +3,7 @@ package com.company.game.concreteObjects;
 import com.company.game.AbstractObjects.Bonus;
 import com.company.game.AbstractObjects.GameObject;
 import com.company.graphics.Assets;
-import com.company.screeStates.GameState;
+import com.company.screenStates.GameState;
 
 public class Player extends GameObject  {
 
@@ -22,24 +22,26 @@ public class Player extends GameObject  {
             isFiring = false;
 
     public Player(int x, int y, String name, int speed) {
+
         super(x, y, Assets.player, speed);
         this.numberOfLives = INITILAL_NUMBER_OF_LIVES;
         this.playerName = name;
         this.score = 0;
+
     }
 
     @Override
     public void update() {
-        if(this.timeForBonus > 0){
+
+        if(this.timeForBonus > 0) {
             this.timeForBonus--;
-        }
-        else if(this.currentBonus != null && this.timeForBonus == 0){
+        } else if(this.currentBonus != null && this.timeForBonus == 0) {
             this.currentBonus = null;
-        }
-        else {
+        } else {
             this.currentBonus = null;
             this.timeForBonus = 0;
         }
+
         this.getColliderBox().setBounds(this.getX(), this.getY(),
                 this.getObjectIcon().getWidth(), this.getObjectIcon().getHeight());
 
@@ -63,8 +65,8 @@ public class Player extends GameObject  {
             else{
                 GameState.bulletsList.add(new Bullet(this.getX() + 16, this.getY(), 1));
             }
-            isFiring =false;
 
+            isFiring = false;
         }
 
     }
@@ -93,15 +95,13 @@ public class Player extends GameObject  {
         this.playerName = playerName;
     }
 
-    public void setCurrentBonus(Bonus bonus){
+    public void setCurrentBonus(Bonus bonus) {
         this.timeForBonus = bonus.getBonusDuration();
         this.currentBonus = bonus;
     }
 
-    public Bonus getCurrentBonus()
-    {
+    public Bonus getCurrentBonus() {
         return this.currentBonus;
     }
-
 
 }

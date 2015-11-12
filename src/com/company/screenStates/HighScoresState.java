@@ -1,38 +1,40 @@
-package com.company.screeStates;
+package com.company.screenStates;
 
-import com.company.game.concreteObjects.*;
 import com.company.game.concreteObjects.Button;
 import com.company.graphics.Assets;
 
 import java.awt.*;
 
 import java.util.Map;
-import java.util.SortedMap;
-import java.util.TreeMap;
 
 public class HighScoresState extends State {
 
     public static final int ROW_HEIGHT = 35;
     private int row = 0;
-    public static Button backButton = new Button(300, 470, Assets.button,"Main menu");
+    public static Button backButton = new Button(300, 470, Assets.button, "Main menu");
     private int backButtonXPos;
 
     public HighScoresState() {
+
         Assets.loadingHighScores();
         backButtonXPos = -220;
         backButton.setX(backButtonXPos);
+
     }
 
     @Override
     public void update() {
+
         if(backButtonXPos < 300) {
             backButtonXPos += 10;
             backButton.setX(backButtonXPos);
         }
+
     }
 
     @Override
     public void display(Graphics g) {
+
         Font blackout = new Font("redensek", Font.PLAIN, 40);
         g.setFont(blackout);
         FontMetrics fontMetrics = g.getFontMetrics();
@@ -54,10 +56,12 @@ public class HighScoresState extends State {
                 break;
             }
         }
+
         row = 0;
         g.setColor(Color.GREEN);
-        g.drawImage(Assets.buttonBar,-20,backButton.getY()+35,null);
+        g.drawImage(Assets.buttonBar, -20, backButton.getY() + 35, null);
         backButton.display(g);
+
     }
 
 }
