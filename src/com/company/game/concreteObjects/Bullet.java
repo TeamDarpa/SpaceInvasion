@@ -17,7 +17,7 @@ public class Bullet extends GameObject {
 
     }
 
-    public int getBulletStrenght() {
+    public int GetBulletStrength() {
         return this.bulletStrenght;
     }
 

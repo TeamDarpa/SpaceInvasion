@@ -45,7 +45,7 @@ public abstract class Enemy extends GameObject {
 
             for (int i = 0; i < GameState.bulletsList.size(); i++) {
                 if (this.collide(GameState.bulletsList.get(i).getColliderBox())) {
-                    this.health -= GameState.bulletsList.get(i).getBulletStrenght();
+                    this.health -= GameState.bulletsList.get(i).GetBulletStrength();
 
                     if (this.health < 0) {
                         this.health = 0;

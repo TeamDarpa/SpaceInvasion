@@ -7,10 +7,10 @@ public class PlayMusic {
     private Clip clip;
 
     // Change file name to match yours, of course
-    public static PlayMusic empire = new PlayMusic("/imperial_march.wav");
-    public static PlayMusic rebels = new PlayMusic("/rebel-theme.wav");
-    public static PlayMusic fire = new PlayMusic("/blaster-firing.wav");
-    public static PlayMusic boom = new PlayMusic("/Explosion.wav");
+    public static PlayMusic empire = new PlayMusic("/Sounds/SithEmpireMusic.wav");
+    public static PlayMusic rebels = new PlayMusic("/Sounds/RebelsMusic.wav");
+    public static PlayMusic fire = new PlayMusic("/Sounds/BlasterFire.wav");
+    public static PlayMusic boom = new PlayMusic("/Sounds/Explosion.wav");
 
     public PlayMusic(String fileName) {
 

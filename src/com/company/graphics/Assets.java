@@ -49,12 +49,12 @@ public class Assets {
         live = ImageLoader.loadImage(ImageAlbum.Live.getPath());
         doubleDamageBonus = ImageLoader.loadImage(ImageAlbum.DoubleDamageBonus.getPath());
         highScoresBackground = ImageLoader.loadImage(ImageAlbum.HighScores.getPath());
-        gameover = ImageLoader.loadImage(ImageAlbum.Gameover.getPath());
+        gameover = ImageLoader.loadImage(ImageAlbum.GameOver.getPath());
         explosion = new SpriteSheet(ImageLoader.loadImage(ImageAlbum.Explosion.getPath()), 100, 100);
         chooseSide = ImageLoader.loadImage(ImageAlbum.ChooseSideBG.getPath());
         mainMenuBackground = ImageLoader.loadImage(ImageAlbum.MainMenu.getPath());
         button = ImageLoader.loadImage(ImageAlbum.Button.getPath());
-        buttonBar = ImageLoader.loadImage(ImageAlbum.ButtonBar.getPath());
+        buttonBar = ImageLoader.loadImage(ImageAlbum.ButtonSlider.getPath());
 
         //Loading font
         try {
@@ -108,10 +108,10 @@ public class Assets {
 
         if (score > lowestScore || highScores.size() < 10) {
             try (PrintWriter writer = new PrintWriter(new FileWriter("res\\highScores.txt", true))) {
-                writer.println(name + " " + score);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            writer.println(name + " " + score);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         }
 
     }

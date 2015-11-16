@@ -3,23 +3,23 @@ package com.company.graphics;
 public enum ImageAlbum {
 
     //If you add another object to the game you must insert it in the enumeration here in order to get it's path
-    RebelPlayer("/MilleniumFalcon65.png"),
-    SithPlayer("/SithInfiltrator65.png"),
-    EasyEmpireEnemy("/TIEFighter65.png"),
-    SturdyEmpireEnemy("/StarDestroyer65.png"),
-    EasyRebelsEnemy("/XWing65.png"),
-    SturdyRebelsEnemy("/JediStarFighter65.png"),
-    DoubleDamageBonus("/x2Bonus.png"),
-    Bullet("/bullet.png"),
-    Background("/bg.jpg"),
-    Live("/live.png"),
-    Gameover("/gameover.jpg"),
-    HighScores("/highScores.png"),
-    Explosion("/explosion.png"),
-    ChooseSideBG("/ChooseSide.jpg"),
-    MainMenu("/mainMenu.jpg"),
-    Button("/button.png"),
-    ButtonBar("/bar1.jpg");
+    RebelPlayer("/Ships/MilleniumFalcon.png"),
+    SithPlayer("/Ships/SithInfiltrator.png"),
+    EasyEmpireEnemy("/Ships/TIEFighter.png"),
+    SturdyEmpireEnemy("/Ships/StarDestroyer.png"),
+    EasyRebelsEnemy("/Ships/XWing.png"),
+    SturdyRebelsEnemy("/Ships/JediStarFighter.png"),
+    DoubleDamageBonus("/InGame/x2Bonus.png"),
+    Bullet("/InGame/Bullet.png"),
+    Background("/Backgrounds/Battlefield.jpg"),
+    Live("/Interface/Live.png"),
+    GameOver("/Backgrounds/GameOver.jpg"),
+    HighScores("/Backgrounds/HighScores.png"),
+    Explosion("/InGame/Explosion.png"),
+    ChooseSideBG("/Backgrounds/ChooseSide.jpg"),
+    MainMenu("/Backgrounds/MainMenu.jpg"),
+    Button("/Interface/Button.png"),
+    ButtonSlider("/Interface/ButtonSlider.jpg");
 
     private String path;
 
