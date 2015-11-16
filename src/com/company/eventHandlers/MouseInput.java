@@ -46,7 +46,7 @@ public class MouseInput implements MouseListener {
             //Sith Button
             if (mouseX >= 50 && mouseX <= 350) {
                 if (mouseY >= 300 && mouseY <= 400) {
-                    PlayMusic.empire.play();
+                    PlayMusic.empire.loop();
                     isRebel = false;
                     StateManager.setCurrentState(new GameState());
                 }
